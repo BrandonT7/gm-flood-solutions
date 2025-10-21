@@ -956,11 +956,6 @@ function QuoteFormPage() {
         email: "",
         address: "",
       }));
-
-      // Auto-reset confirmation after 5 seconds
-      setTimeout(() => {
-        setQuoteForm((prev) => ({ ...prev, isSubmitted: false }));
-      }, 5000);
     } catch (err: any) {
       console.error("Form Submission Failed:", err);
       // Show user-friendly error message
@@ -1000,15 +995,34 @@ function QuoteFormPage() {
             </CardHeader>
             <CardContent className="pt-0">
               {quoteForm.isSubmitted ? (
-                <div className="bg-emerald-50 border border-emerald-300 text-emerald-800 p-6 rounded-xl text-center">
+                // ✅ Thank-You panel replaces the form after successful submit
+                <div
+                  role="status"
+                  aria-live="polite"
+                  className="rounded-xl p-6 border bg-emerald-50 text-emerald-800 text-center"
+                >
                   <CheckBadge className="h-10 w-10 mx-auto text-emerald-500 mb-3" />
-                  <h4 className="font-semibold reorganize text-lg">
-                    Quote Request Submitted!
-                  </h4>
-                  <p className="mt-1 text-sm">
-                    Thank you! We've received your request and a specialist will
-                    be in touch shortly to provide your assessment and quote.
+                  <h2 className="text-xl font-semibold mb-2">
+                    Thanks! We received your request.
+                  </h2>
+                  <p className="mb-3">
+                    We’ll contact you shortly. If it’s urgent, call{" "}
+                    <a href="tel:17277934584" className="underline">
+                      (727) 793-4584
+                    </a>
+                    .
                   </p>
+                  <button
+                    className="px-4 py-2 rounded bg-black text-white"
+                    onClick={() =>
+                      setQuoteForm((prev) => ({
+                        ...prev,
+                        isSubmitted: false, // Bring back the form if they want another
+                      }))
+                    }
+                  >
+                    Submit another request
+                  </button>
                 </div>
               ) : (
                 <form onSubmit={handleQuoteSubmit} className="space-y-4">
