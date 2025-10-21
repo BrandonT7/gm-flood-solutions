@@ -995,29 +995,22 @@ function QuoteFormPage() {
             </CardHeader>
             <CardContent className="pt-0">
               {quoteForm.isSubmitted ? (
-                // ✅ Thank-You panel replaces the form after successful submit
+                // ✅ Simplified thank-you panel with pointer hover on button
                 <div
                   role="status"
                   aria-live="polite"
                   className="rounded-xl p-6 border bg-emerald-50 text-emerald-800 text-center"
                 >
                   <CheckBadge className="h-10 w-10 mx-auto text-emerald-500 mb-3" />
-                  <h2 className="text-xl font-semibold mb-2">
+                  <h2 className="text-xl font-semibold mb-4">
                     Thanks! We received your request.
                   </h2>
-                  <p className="mb-3">
-                    We’ll contact you shortly. If it’s urgent, call{" "}
-                    <a href="tel:17277934584" className="underline">
-                      (727) 793-4584
-                    </a>
-                    .
-                  </p>
                   <button
-                    className="px-4 py-2 rounded bg-black text-white"
+                    className="px-4 py-2 rounded bg-black text-white hover:bg-gray-800 cursor-pointer transition"
                     onClick={() =>
                       setQuoteForm((prev) => ({
                         ...prev,
-                        isSubmitted: false, // Bring back the form if they want another
+                        isSubmitted: false, // Show form again when clicked
                       }))
                     }
                   >
