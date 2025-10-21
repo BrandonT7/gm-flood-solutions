@@ -1,19 +1,37 @@
 // /api/quote.ts
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 
-const ALLOWED_ORIGINS = [
+// Explicit prod domains you own
+const ALLOWED_STATIC = new Set<string>([
   "https://gm-flood-solutions.vercel.app",
-  // Add your custom domain when you have one:
+  // Add your custom domain when you connect it:
   // "https://gmfloodsolutions.com",
   // Dev (Vite):
   "http://localhost:5173",
-  // GitHub Pages (if you host frontend there):
+  // If you use GitHub Pages for frontend:
   // "https://<YOUR_USERNAME>.github.io"
-];
+]);
+
+function isAllowedOrigin(origin?: string): boolean {
+  if (!origin) return false;
+  if (ALLOWED_STATIC.has(origin)) return true;
+
+  // Allow this project's Vercel preview domains (they change per deploy).
+  // Example: https://gm-flood-solutions-xxxxx-brandon-temalis-projects.vercel.app
+  try {
+    const u = new URL(origin);
+    const host = u.host; // e.g., gm-flood-solutions-xxxxx-brandon-temalis-projects.vercel.app
+    return (
+      host.endsWith(".vercel.app") && host.includes("gm-flood-solutions") // ensure it's YOUR project’s previews
+    );
+  } catch {
+    return false;
+  }
+}
 
 function setCors(res: VercelResponse, origin?: string) {
-  if (origin && ALLOWED_ORIGINS.includes(origin)) {
-    res.setHeader("Access-Control-Allow-Origin", origin);
+  if (isAllowedOrigin(origin)) {
+    res.setHeader("Access-Control-Allow-Origin", origin!);
   }
   res.setHeader("Vary", "Origin");
   res.setHeader("Access-Control-Allow-Credentials", "true");
@@ -25,8 +43,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   const origin = req.headers.origin as string | undefined;
   setCors(res, origin);
 
-  // Handle preflight for cross-origin requests
   if (req.method === "OPTIONS") {
+    // Preflight response
     return res.status(204).end();
   }
 
@@ -39,15 +57,14 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     const { name, phone, email, address, source, message, _gotcha } =
       (req.body ?? {}) as Record<string, string>;
 
-    // Honeypot spam trap (hidden field)
+    // Honeypot spam trap
     if (_gotcha) return res.status(200).json({ ok: true });
 
-    // Basic validation
     if (!name || !phone || !email) {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    // TODO: email or save to DB here (we can add next)
+    // TODO: email or save to DB
     console.log("New quote:", { name, phone, email, address, source, message });
 
     return res.status(200).json({ ok: true });
