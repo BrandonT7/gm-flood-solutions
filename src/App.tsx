@@ -926,15 +926,18 @@ function QuoteFormPage() {
       // Use the URL provided by your chosen backend (e.g., Netlify Forms, Formspree, AWS Lambda).
       // This is where the magic happens to capture your lead!
       // ***************************************************************
-      const response = await fetch("YOUR_API_ENDPOINT_HERE", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          // Note: Some services like Formspree require a Content-Type of 'application/x-www-form-urlencoded'
-          // or have specific requirements. Check your service's documentation.
-        },
-        body: JSON.stringify(submissionData),
-      });
+      const response = await fetch(
+        "https://gm-flood-solutions.vercel.app/api/quote",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            // Note: Some services like Formspree require a Content-Type of 'application/x-www-form-urlencoded'
+            // or have specific requirements. Check your service's documentation.
+          },
+          body: JSON.stringify(submissionData),
+        }
+      );
 
       if (!response.ok) {
         // Log the error response from the server for debugging
