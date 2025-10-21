@@ -363,18 +363,21 @@ function ReviewsHeader() {
           Trusted by over 2,000 Florida homeowners
         </span>
       </div>
+
       <h2 className="mt-3 reorganize text-2xl md:text-3xl font-semibold reorganize text-slate-900">
         Real Protection. Real Results.
       </h2>
+
       <p className="mt-2 text-slate-600 reorganize text-sm md:text-base">
-        Homeowners across Florida rely on GM Flood Solutions to safeguard their
-        properties—hear their real experiences and see why our barriers make a
-        difference.
+        Here’s what customers are saying about the Dam Easy Flood Barriers we
+        install. <br />
+        <span className="text-xs text-slate-500">
+          (Reviews courtesy of Dam Easy Flood Barriers' official website.)
+        </span>
       </p>
     </div>
   );
 }
-
 // --------------------------------------
 // Reviews Carousel (unchanged)
 // --------------------------------------
