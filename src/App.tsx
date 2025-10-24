@@ -151,135 +151,88 @@ const POLICY_PAGES = [
     content: (
       <div className="prose prose-slate max-w-none">
         <p>
-          <b>Last Updated:</b> October 2025
+          <b>Effective Date:</b> October 2025
         </p>
         <p>
-          GM Flood Solutions (“GM Flood Solutions,” “we,” “us,” or “our”) values
-          your privacy and is committed to safeguarding your personal
-          information. This Privacy Policy explains how we collect, use, and
-          share data when you visit our website, request a quote, or otherwise
-          interact with our services.
+          GM Flood Solutions (“we,” “us,” or “our”) is committed to protecting
+          your privacy. This Privacy Policy describes how we collect, use, and
+          share information when you visit our website, request a quote, or
+          otherwise interact with us. By using our website, you agree to the
+          terms described in this Policy.
         </p>
 
         <h3>1) Information We Collect</h3>
         <p>
-          We collect personal and technical information in the following
-          categories:
+          We collect information from you in several ways to provide and improve
+          our services.
         </p>
         <ul>
           <li>
-            <b>Contact Information:</b> Name, phone number, email address, and
-            any details you provide when requesting a quote or contacting us.
+            <b>Information you provide directly:</b> This includes details
+            submitted through contact or quote forms such as your name, email
+            address, phone number, property details, and any message you send.
           </li>
           <li>
-            <b>Technical Information:</b> IP address, browser type, device
-            details, and usage data such as pages visited and time spent on our
-            site.
+            <b>Automatically collected data:</b> When you visit our site, we may
+            collect limited technical data such as your IP address, browser
+            type, device identifiers, referral URLs, and pages visited. This
+            helps us measure website performance and detect security issues.
           </li>
           <li>
-            <b>Cookies and Tracking:</b> Small text files stored on your device
-            that help us improve performance, measure traffic, and customize
-            user experience.
+            <b>Cookies and tracking technologies:</b> We use essential cookies
+            for site operation and may use optional analytics cookies to improve
+            performance. You can control cookie use through your browser
+            settings.
           </li>
         </ul>
 
-        <h3>2) How We Collect Information</h3>
+        <h3>2) How We Use Your Information</h3>
+        <p>We use your personal information for purposes such as:</p>
         <ul>
+          <li>Responding to inquiries and providing service quotes.</li>
           <li>
-            <b>Directly from you:</b> When you fill out contact forms or
-            communicate with us.
+            Improving the performance, functionality, and security of our
+            website.
           </li>
           <li>
-            <b>Automatically:</b> Through analytics tools that collect technical
-            information during your visit.
+            Communicating with you about updates, promotions, or service-related
+            information.
           </li>
           <li>
-            <b>Through service providers:</b> We may use trusted third parties
-            (e.g., hosting and analytics) to support site performance and
-            security.
+            Complying with legal obligations and preventing fraud or misuse.
           </li>
         </ul>
 
-        <h3>3) How We Use Information</h3>
+        <h3>3) How We Share Information</h3>
+        <p>
+          We do <b>not sell</b> your personal data. We may share limited
+          information with trusted third-party providers that help operate our
+          website (e.g., hosting, analytics, or email services). These providers
+          are contractually obligated to protect your data and use it only for
+          authorized purposes. We may disclose information if required by law or
+          to protect our rights and property.
+        </p>
+
+        <h3>4) Data Retention</h3>
+        <p>
+          We retain personal information only as long as necessary to provide
+          our services, comply with legal obligations, or resolve disputes. When
+          data is no longer needed, it is securely deleted or anonymized.
+        </p>
+
+        <h3>5) Security of Your Information</h3>
+        <p>
+          We implement reasonable administrative, technical, and physical
+          safeguards to protect your information. While we strive to secure your
+          data, no method of transmission over the Internet is completely
+          secure, and we cannot guarantee absolute protection.
+        </p>
+
+        <h3>6) Your Rights and Choices</h3>
         <ul>
-          <li>
-            Respond to your inquiries, provide quotes, and deliver requested
-            services.
-          </li>
-          <li>
-            Improve our website’s functionality, user experience, and security.
-          </li>
-          <li>
-            Send updates, promotions, and important service information (you may
-            opt out anytime).
-          </li>
-          <li>
-            Comply with applicable laws, regulations, and enforce our policies.
-          </li>
-        </ul>
-
-        <h3>4) SMS Communications</h3>
-        <p>
-          By providing your phone number, you consent to receive SMS messages
-          from GM Flood Solutions regarding quotes, appointments, or updates.
-          You may opt out at any time by replying “STOP” to a message or
-          contacting us at{" "}
-          <a
-            href="mailto:gmfloodsolutions@gmail.com"
-            className="underline text-sky-700"
-          >
-            gmfloodsolutions@gmail.com
-          </a>
-          .
-        </p>
-
-        <h3>5) Cookies & Tracking Technologies</h3>
-        <p>
-          We use cookies and similar tracking tools to enhance your browsing
-          experience. Cookies help us:
-        </p>
-        <ul>
-          <li>Remember your preferences and settings.</li>
-          <li>Analyze site traffic and user behavior.</li>
-          <li>Improve performance and security.</li>
-        </ul>
-        <p>
-          You can control or delete cookies through your browser settings.
-          Disabling cookies may affect certain features of our website.
-        </p>
-
-        <h3>6) Disclosure of Information</h3>
-        <p>
-          We may share your personal information with third-party service
-          providers that assist with operations such as web hosting, email
-          communication, analytics, and marketing. These providers are bound by
-          confidentiality agreements and may not use your data for their own
-          purposes.
-        </p>
-        <p>
-          We may also disclose information when required by law, to protect our
-          legal rights, or as part of a business transaction such as a merger or
-          acquisition.
-        </p>
-
-        <h3>7) Data Retention & Security</h3>
-        <p>
-          We retain your personal data only as long as necessary to fulfill the
-          purposes outlined above or as required by law. We employ appropriate
-          administrative and technical safeguards to prevent unauthorized access
-          or misuse. However, no internet transmission or storage system can be
-          guaranteed 100% secure.
-        </p>
-
-        <h3>8) Your Rights & Choices</h3>
-        <ul>
-          <li>
-            Request access to, correction, or deletion of your personal data.
-          </li>
-          <li>Opt out of marketing or SMS communications.</li>
-          <li>
-            Withdraw consent for non-essential cookies or analytics tracking.
-          </li>
+          <li>Access, correct, or request deletion of your personal data.</li>
+          <li>Opt out of marketing or non-essential communications.</li>
+          <li>Withdraw consent for analytics or cookie tracking.</li>
         </ul>
         <p>
           To exercise these rights, please contact us at{" "}
@@ -292,56 +245,57 @@ const POLICY_PAGES = [
           .
         </p>
 
-        <h3>9) Children’s Privacy</h3>
+        <h3>7) Links to Third-Party Websites</h3>
         <p>
-          Our website and services are not directed toward children under 13. We
-          do not knowingly collect data from minors. If you believe a child has
-          provided us with information, please contact us for removal.
+          Our website may contain links to external websites operated by our
+          product partners, such as Dam Easy Flood Barriers. We are not
+          responsible for the content or privacy practices of third-party sites.
+          We encourage you to review their policies before providing any
+          personal data.
         </p>
 
-        <h3>10) Legal Disclaimers</h3>
-        <ul>
-          <li>
-            <b>No Warranty:</b> We make no representations or warranties
-            regarding the accuracy or reliability of the information on this
-            site.
-          </li>
-          <li>
-            <b>Limitation of Liability:</b> We are not liable for any indirect,
-            incidental, or consequential damages arising from your use of this
-            site.
-          </li>
-        </ul>
-
-        <h3>11) Governing Law</h3>
+        <h3>8) Children’s Privacy</h3>
         <p>
-          This Privacy Policy shall be governed by and construed in accordance
-          with the laws of the
-          <b> State of Florida</b>, U.S.A., without regard to conflict-of-law
+          Our website is intended for use by adults and is not directed toward
+          children under 13. We do not knowingly collect personal information
+          from minors.
+        </p>
+
+        <h3>9) Data Transfers</h3>
+        <p>
+          If you access our site from outside the United States, your data may
+          be transferred to servers located within the U.S. By using our site,
+          you consent to this transfer.
+        </p>
+
+        <h3>10) Governing Law</h3>
+        <p>
+          This Privacy Policy is governed by the laws of the{" "}
+          <b>State of Florida</b>, U.S.A., without regard to its conflict-of-law
           principles.
         </p>
 
-        <h3>12) Changes to This Policy</h3>
+        <h3>11) Updates to This Policy</h3>
         <p>
-          We may update this Policy periodically. The “Last Updated” date above
-          reflects the latest revision. Continued use of our site after updates
-          indicates your acceptance of any changes.
+          We may update this Policy periodically to reflect changes in our
+          practices or for other operational, legal, or regulatory reasons. The
+          Effective Date above indicates the most recent revision.
         </p>
 
-        <h3>13) Contact Us</h3>
+        <h3>12) Contact Us</h3>
         <ul>
           <li>
             Email:{" "}
             <a
               href="mailto:gmfloodsolutions@gmail.com"
-              className="underline text-sky-700"
+              className="underline text-sky-600"
             >
               gmfloodsolutions@gmail.com
             </a>
           </li>
           <li>
             Phone:{" "}
-            <a href="tel:7277934584" className="underline text-sky-700">
+            <a href="tel:7277934584" className="underline text-sky-600">
               (727) 793-4584
             </a>
           </li>
@@ -366,112 +320,127 @@ const POLICY_PAGES = [
     content: (
       <div className="prose prose-slate max-w-none">
         <p>
-          <b>Last Updated:</b> October 2025
+          <b>Effective Date:</b> October 2025
         </p>
         <p>
           These Terms of Service (“Terms”) govern your access to and use of the
-          GM Flood Solutions website (“Site”) and services. By using this Site,
-          you agree to comply with these Terms and our Privacy Policy. If you
-          disagree with any part, please discontinue use of our Site
-          immediately.
+          GM Flood Solutions website (the “Site”). By using our Site, you agree
+          to these Terms. Please read them carefully before proceeding.
         </p>
 
-        <h3>1) Use of the Site</h3>
+        <h3>1) Acceptance of Terms</h3>
+        <p>
+          By accessing this Site, you agree to comply with these Terms and all
+          applicable laws and regulations. If you do not agree, you must
+          discontinue use immediately.
+        </p>
+
+        <h3>2) Services Provided</h3>
+        <p>
+          GM Flood Solutions offers information about flood barrier products,
+          installation services, and contact options for quote requests.
+          Information presented is for general educational and marketing
+          purposes only and does not constitute engineering or professional
+          advice.
+        </p>
+
+        <h3>3) Use Restrictions</h3>
         <ul>
-          <li>You may use our Site for lawful purposes only.</li>
+          <li>Do not use the Site for illegal or fraudulent activities.</li>
           <li>
-            You may not attempt to interfere with, damage, or disrupt the
-            functionality of the Site.
+            Do not attempt to interfere with the Site’s functionality, servers,
+            or security.
           </li>
           <li>
-            You may not copy or redistribute our materials without prior written
+            Do not copy, modify, or redistribute content without our written
             permission.
           </li>
         </ul>
 
-        <h3>2) Services & Information</h3>
-        <p>
-          GM Flood Solutions provides information about flood barrier products
-          and installation services. The information provided on this Site is
-          for general informational purposes and does not constitute
-          professional advice. We reserve the right to modify or discontinue any
-          content or service without notice.
-        </p>
-
-        <h3>3) Quotes & Pricing</h3>
-        <p>
-          Quotes provided through our Site or via email are based on the
-          information submitted and may be subject to adjustment after site
-          evaluation. Pricing, availability, and specifications are subject to
-          change at any time without notice.
-        </p>
-
         <h3>4) Intellectual Property</h3>
         <p>
-          All materials on this Site — including text, logos, product images,
-          and graphics — are the property of GM Flood Solutions or licensed to
-          us. Unauthorized reproduction or modification is strictly prohibited.
+          All content, logos, trademarks, and materials displayed on the Site
+          are owned by GM Flood Solutions or licensed for our use. You may not
+          reproduce, distribute, or exploit any content without our prior
+          written consent.
         </p>
 
-        <h3>5) Communications</h3>
+        <h3>5) Disclaimers</h3>
         <p>
-          By submitting your contact information, you consent to receive
-          communications from GM Flood Solutions, including service
-          confirmations, appointment reminders, and limited promotional
-          messages. You may opt out of marketing messages at any time.
+          The Site and all content are provided “as is.” GM Flood Solutions
+          disclaims all warranties, express or implied, including warranties of
+          merchantability or fitness for a particular purpose. We make no
+          guarantee that the Site will be error-free, uninterrupted, or that its
+          content will always be accurate or up to date.
         </p>
 
         <h3>6) Limitation of Liability</h3>
         <p>
-          To the fullest extent permitted by law, GM Flood Solutions shall not
-          be liable for any damages, losses, or expenses arising out of your use
-          or inability to use this Site, including indirect, incidental, or
-          consequential damages.
+          To the fullest extent permitted by law, GM Flood Solutions, its
+          owners, employees, and partners shall not be liable for any indirect,
+          incidental, or consequential damages arising out of your use of the
+          Site or reliance on its content.
         </p>
 
         <h3>7) Indemnification</h3>
         <p>
-          You agree to indemnify and hold GM Flood Solutions harmless from any
-          claims, losses, or damages resulting from your misuse of the Site or
-          violation of these Terms.
+          You agree to defend, indemnify, and hold harmless GM Flood Solutions
+          from and against any claims, damages, liabilities, and expenses
+          arising from your use of the Site, your violation of these Terms, or
+          infringement of any third-party rights.
         </p>
 
-        <h3>8) Disclaimer of Warranties</h3>
+        <h3>8) Quotes, Pricing, and Product Information</h3>
         <p>
-          The Site and all content are provided “as is” and “as available.” We
-          make no warranties, express or implied, regarding the operation,
-          reliability, or availability of the Site.
+          Product descriptions, specifications, pricing, and availability are
+          subject to change without notice. Quotes are estimates and may vary
+          based on site conditions, measurements, and material costs. We reserve
+          the right to modify or discontinue any product or service at any time.
         </p>
 
-        <h3>9) Governing Law & Dispute Resolution</h3>
+        <h3>9) Links to Other Websites</h3>
         <p>
-          These Terms and any dispute arising from them are governed by the laws
-          of the
-          <b> State of Florida</b>. Any disputes will be resolved exclusively in
-          the state or federal courts of Florida.
+          Our Site may link to third-party websites such as product
+          manufacturers or distributors. We are not responsible for the content
+          or privacy practices of external sites.
         </p>
 
-        <h3>10) Changes to These Terms</h3>
+        <h3>10) Termination</h3>
         <p>
-          GM Flood Solutions may revise these Terms at any time. Continued use
-          of the Site after changes indicates your acceptance of the updated
-          Terms.
+          We reserve the right to suspend or terminate your access to the Site
+          at any time without notice if you violate these Terms or engage in
+          conduct that may harm our business or reputation.
         </p>
 
-        <h3>11) Contact</h3>
+        <h3>11) Dispute Resolution</h3>
+        <p>
+          Any dispute arising out of or relating to these Terms or your use of
+          the Site shall be governed by the laws of the <b>State of Florida</b>{" "}
+          and resolved exclusively in the state or federal courts located in
+          Florida.
+        </p>
+
+        <h3>12) Changes to These Terms</h3>
+        <p>
+          We may revise these Terms periodically. The updated version will be
+          posted on this page, and the date above will reflect the latest
+          update.
+        </p>
+
+        <h3>13) Contact Information</h3>
         <ul>
           <li>
             Email:{" "}
             <a
               href="mailto:gmfloodsolutions@gmail.com"
-              className="underline text-sky-700"
+              className="underline text-sky-600"
             >
               gmfloodsolutions@gmail.com
             </a>
           </li>
           <li>
             Phone:{" "}
-            <a href="tel:7277934584" className="underline text-sky-700">
+            <a href="tel:7277934584" className="underline text-sky-600">
               (727) 793-4584
             </a>
           </li>
@@ -484,7 +453,6 @@ const POLICY_PAGES = [
     ),
   },
 ];
-
 // --------------------------------------
 // Local icons
 // --------------------------------------
