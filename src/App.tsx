@@ -19,8 +19,8 @@ const LOGO_SRC_MANUAL = "products/GMlogo2.png";
 const PRODUCTS = [
   // REMOVED: GM StormLock product
   {
-    name: "Dameasy Flood Barriers",
-    slug: "dameasy",
+    name: "Dam Easy Flood Barriers",
+    slug: "Dam Easy",
     category: "Residential",
     blurb:
       "Trusted residential flood barrier solution with easy setup and proven results.",
@@ -101,8 +101,8 @@ const PRODUCTS = [
     },
   },
   {
-    name: "Titan Flood Barriers",
-    slug: "titan",
+    name: "Dam Easy Titan Flood Barriers",
+    slug: "Dam Easy Titan",
     category: "Commercial",
     blurb:
       "Heavy-duty modular panels for storefronts, warehouses, and commercial entries.",
