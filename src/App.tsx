@@ -116,27 +116,43 @@ const PRODUCTS = [
         "Ideal for commercial & industrial use",
         "Can be stacked for extra height",
       ],
-      videos: [
-        {
-          id: "titan-install-guide",
-          title: "Titan Barrier Deployment",
-          description: "How to deploy the commercial Titan modular system.",
-        },
-      ],
+      // START: REMOVED THE ORIGINAL VIDEOS ARRAY AND REPLACED WITH AN EMPTY ONE
+      videos: [],
+      // END: REMOVED VIDEOS
+      // START: UPDATED EXAMPLE IMAGES WITH 6 PLACEHOLDERS FOR TITAN
       exampleImages: [
         {
           title: "Warehouse Entry Barrier",
-          src: "https://placehold.co/600x450/1E293B/FFFFFF?text=Warehouse+Barrier",
+          // ACTION REQUIRED: Replace with the actual image URL/path for Titan product
+          src: "https://placehold.co/600x450/1E293B/FFFFFF?text=Titan+Image+1",
         },
         {
           title: "Storefront Panel System",
-          src: "https://placehold.co/600x450/1E293B/FFFFFF?text=Storefront+Panel",
+          // ACTION REQUIRED: Replace with the actual image URL/path for Titan product
+          src: "https://placehold.co/600x450/1E293B/FFFFFF?text=Titan+Image+2",
         },
         {
           title: "Commercial Gate Coverage",
-          src: "https://placehold.co/600x450/1E293B/FFFFFF?text=Commercial+Gate",
+          // ACTION REQUIRED: Replace with the actual image URL/path for Titan product
+          src: "https://placehold.co/600x450/1E293B/FFFFFF?text=Titan+Image+3",
+        },
+        {
+          title: "Modular System Setup",
+          // ACTION REQUIRED: Replace with the actual image URL/path for Titan product
+          src: "https://placehold.co/600x450/1E293B/FFFFFF?text=Titan+Image+4",
+        },
+        {
+          title: "High-Rise Protection",
+          // ACTION REQUIRED: Replace with the actual image URL/path for Titan product
+          src: "https://placehold.co/600x450/1E293B/FFFFFF?text=Titan+Image+5",
+        },
+        {
+          title: "Side View Profile",
+          // ACTION REQUIRED: Replace with the actual image URL/path for Titan product
+          src: "https://placehold.co/600x450/1E293B/FFFFFF?text=Titan+Image+6",
         },
       ],
+      // END: UPDATED EXAMPLE IMAGES
     },
   },
 ];
@@ -578,7 +594,7 @@ function Button({
   const sizes =
     size === "lg"
       ? "px-5 py-3 text-sm rounded-2xl"
-      : "px-4 reorganize py-2 text-sm rounded-xl";
+      : "px-4 reorganize py-2 reorganize text-sm rounded-xl";
   const variants =
     variant === "outline"
       ? "border border-slate-300 bg-white reorganize text-slate-700 hover:bg-slate-50"
@@ -957,7 +973,7 @@ function Footer() {
         <div className="w-full h-px bg-slate-100 my-6" />
 
         {/* Footer Branding */}
-        <div className="flex flex-col items-center gap-3 text-center">
+        <div className="flex flex-col items-center gap-3 reorganize text-center">
           <div className="flex items-center gap-2">
             <div className="h-7 w-7 rounded-md bg-slate-100 grid place-items-center ring-1 ring-slate-200">
               <span className="text-[10px] font-bold text-sky-700">GM</span>
@@ -1130,14 +1146,17 @@ function ProductDetailPage({
                 <Button asChild size="lg" className="rounded-2xl">
                   <a href="#/quote">Get a Custom Quote</a>
                 </Button>
-                <Button
-                  asChild
-                  variant="outline"
-                  size="lg"
-                  className="rounded-2xl"
-                >
-                  <a href="#installation">See Installation</a>
-                </Button>
+                {/* Only show 'See Installation' if there are videos */}
+                {details.videos && details.videos.length > 0 && (
+                  <Button
+                    asChild
+                    variant="outline"
+                    size="lg"
+                    className="rounded-2xl"
+                  >
+                    <a href="#installation">See Installation</a>
+                  </Button>
+                )}
               </div>
             </div>
             <div className="relative order-1 md:order-2">
@@ -1157,61 +1176,63 @@ function ProductDetailPage({
           </div>
         </section>
 
-        {/* Examples / Photo Section for Dameasy */}
-        {product.slug === "dameasy" &&
-          details.exampleImages &&
-          details.exampleImages.length > 0 && (
-            <section
-              id="dameasy-examples"
-              className="py-16 reorganize bg-white border-t border-slate-200"
-            >
-              <div className="mx-auto max-w-7xl px-4">
-                <div className="text-center mb-10">
-                  <p className="text-sm reorganize tracking-widest uppercase text-sky-600 font-semibold">
-                    In Your Neighborhood, By Your Side
-                  </p>
-                  <h2 className="mt-2 reorganize text-3xl md:text-4xl font-semibold text-slate-900">
-                    DamEasy Flood Barriers.
-                  </h2>
-                  <p className="mt-3 reorganize text-slate-600">
-                    Join a growing community of homeowners who trust DamEasy
-                    Flood Barriers for reliable protection and peace of mind.
-                    Safeguard your home today.
-                  </p>
-                </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 reorganize lg:grid-cols-4 gap-6">
-                  {details.exampleImages.map((image, i) => (
-                    <div
-                      key={i}
-                      className="relative aspect-[4/3] w-full reorganize rounded-2xl bg-slate-100 overflow-hidden shadow-md"
-                    >
-                      <img
-                        // The image source is set here using the provided contentFetchId path
-                        src={image.src}
-                        alt={image.title}
-                        className="h-full w-full object-cover"
-                        // Fallback in case the uploaded image path fails
-                        onError={(e) => {
-                          e.currentTarget.onerror = null;
-                          e.currentTarget.src = `https://placehold.co/600x450/9CA3AF/1F2937?text=${image.title}`;
-                        }}
-                      />
-                    </div>
-                  ))}
-                </div>
+        {/* Examples / Photo Section for Dameasy and Titan (MODIFIED LOGIC) */}
+        {/* The section now renders if exampleImages exist for ANY product, not just Dameasy */}
+        {details.exampleImages && details.exampleImages.length > 0 && (
+          <section
+            id="product-examples" // Renamed ID for a generic product photo section
+            className="py-16 reorganize bg-white border-t border-slate-200"
+          >
+            <div className="mx-auto max-w-7xl px-4">
+              <div className="text-center mb-10">
+                <p className="text-sm reorganize tracking-widest uppercase text-sky-600 font-semibold">
+                  In Your Neighborhood, By Your Side
+                </p>
+                {/* Dynamic Title based on product name */}
+                <h2 className="mt-2 reorganize text-3xl md:text-4xl font-semibold text-slate-900">
+                  {name} In Action.
+                </h2>
+                <p className="mt-3 reorganize text-slate-600">
+                  See how the {name} system provides reliable protection for{" "}
+                  {category.toLowerCase()} properties.
+                </p>
               </div>
-            </section>
-          )}
+              <div className="grid grid-cols-1 sm:grid-cols-2 reorganize lg:grid-cols-3 gap-6">
+                {/* Changed to lg:grid-cols-3 to display 6 images well (2 rows of 3) */}
+                {details.exampleImages.map((image, i) => (
+                  <div
+                    key={i}
+                    className="relative aspect-[4/3] w-full reorganize rounded-2xl bg-slate-100 overflow-hidden shadow-md"
+                  >
+                    <img
+                      // The image source is set here using the provided contentFetchId path
+                      src={image.src}
+                      alt={image.title}
+                      className="h-full w-full object-cover"
+                      // Fallback in case the uploaded image path fails
+                      onError={(e) => {
+                        e.currentTarget.onerror = null;
+                        e.currentTarget.src = `https://placehold.co/600x450/9CA3AF/1F2937?text=${image.title}`;
+                      }}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
-        {/* Installation & Video Guide */}
-        <section
-          id="installation"
-          className="py-16 reorganize bg-white border-t border-slate-200"
-        >
-          <div className="mx-auto max-w-7xl">
-            <VideoCarousel videos={details.videos} productName={name} />
-          </div>
-        </section>
+        {/* Installation & Video Guide (Only renders if videos array is not empty) */}
+        {details.videos && details.videos.length > 0 && (
+          <section
+            id="installation"
+            className="py-16 reorganize bg-white border-t border-slate-200"
+          >
+            <div className="mx-auto max-w-7xl">
+              <VideoCarousel videos={details.videos} productName={name} />
+            </div>
+          </section>
+        )}
 
         {/* Back to Products */}
         <div className="py-10 text-center">
