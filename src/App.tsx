@@ -142,6 +142,240 @@ const PRODUCTS = [
 ];
 
 // --------------------------------------
+// Policy Data Store (NEW)
+// --------------------------------------
+const POLICY_PAGES = [
+  {
+    slug: "privacy-policy",
+    title: "Privacy Policy",
+    content: (
+      <>
+        <p className="mt-4 text-slate-700">
+          This is a **placeholder Privacy Policy** for **GM Flood Solutions**.
+          The actual content of your Privacy Policy must be drafted by a legal
+          professional to comply with all applicable laws (e.g., CCPA, GDPR,
+          CPRA, etc.).
+        </p>
+        <p className="mt-4 text-slate-700">
+          **General Statement:** GM Flood Solutions is committed to protecting
+          your privacy. This policy outlines how we collect, use, and protect
+          any personal data you provide to us via our website, including data
+          collected through the "Get a Quote" form. We only use your information
+          to provide the requested services, fulfill contractual obligations,
+          and communicate with you about our products.
+        </p>
+        <h3 className="mt-6 text-xl font-semibold text-slate-900">
+          Information We Collect
+        </h3>
+        <ul className="mt-3 space-y-2 list-disc list-inside text-slate-700">
+          <li>
+            Personal Identifiers (Name, Phone, Email, Address) provided in the
+            quote form.
+          </li>
+          <li>
+            Usage Data (IP address, browser type) collected via website
+            analytics.
+          </li>
+        </ul>
+        <h3 className="mt-6 text-xl font-semibold text-slate-900">
+          Your Rights
+        </h3>
+        <p className="mt-4 text-slate-700">
+          Depending on your jurisdiction, you may have the right to access,
+          correct, or delete your personal information. Please use the contact
+          information provided on the site to exercise these rights.
+        </p>
+      </>
+    ),
+  },
+  {
+    slug: "manage-consent",
+    title: "Manage Consent Preferences",
+    content: (
+      <>
+        <p className="mt-4 text-slate-700">
+          This is a **placeholder page for managing consent preferences**. In a
+          live environment, this page would typically host a **Cookie Consent
+          Management Platform (CMP)** interface, allowing users to opt-in or
+          opt-out of various categories of tracking technologies (e.g.,
+          performance, analytics, targeting cookies).
+        </p>
+        <p className="mt-4 text-slate-700">
+          **Current Status:** As a simple example, all non-essential cookies are
+          currently disabled.
+        </p>
+        <div className="mt-6 p-4 border rounded-lg bg-yellow-50 border-yellow-200">
+          <h4 className="font-semibold text-yellow-800">
+            Analytics and Tracking
+          </h4>
+          <p className="text-sm text-yellow-700">
+            [X] Marketing Cookies - **Opted Out**
+          </p>
+          <p className="text-sm text-yellow-700">
+            [X] Performance Cookies - **Opted Out**
+          </p>
+          <p className="text-sm text-yellow-700 italic">
+            (Note: Strictly necessary cookies for site function cannot be
+            disabled.)
+          </p>
+        </div>
+      </>
+    ),
+  },
+  {
+    slug: "do-not-share",
+    title: "Do Not Share My Information",
+    content: (
+      <>
+        <p className="mt-4 text-slate-700">
+          This is a **placeholder page for the "Do Not Share My Personal
+          Information"** link, required by privacy regulations like the
+          CCPA/CPRA.
+        </p>
+        <p className="mt-4 text-slate-700">
+          **Right to Opt-Out:** Under certain state laws, consumers have the
+          right to direct a business not to "sell" or "share" their personal
+          information. GM Flood Solutions does not currently sell or share your
+          personal information to third parties for monetary or other valuable
+          consideration.
+        </p>
+        <p className="mt-4 text-slate-700 font-semibold">
+          If you believe your information is being shared, you can submit an
+          opt-out request by calling us at (727) 793-4584.
+        </p>
+        <div className="mt-6 p-4 border rounded-lg bg-sky-50 border-sky-200">
+          <p className="text-sm text-sky-800">
+            **Notice:** Please note that we may still share your information
+            with service providers under contract who help with our business
+            operations (e.g., website hosting, email services), but these
+            entities are prohibited from using your data for any other purpose.
+          </p>
+        </div>
+      </>
+    ),
+  },
+  {
+    slug: "conditions-of-use",
+    title: "Conditions of Use (Terms of Service)",
+    content: (
+      <>
+        <p className="mt-4 text-slate-700">
+          This is a **placeholder Conditions of Use (Terms of Service)
+          agreement** for **GM Flood Solutions**. This content must be legally
+          reviewed before use on a live website.
+        </p>
+        <h3 className="mt-6 text-xl font-semibold text-slate-900">
+          Acceptance of Terms
+        </h3>
+        <p className="mt-4 text-slate-700">
+          By accessing and using the GM Flood Solutions website, you agree to be
+          bound by these Conditions of Use. If you do not agree, you must cease
+          use of the website immediately.
+        </p>
+        <h3 className="mt-6 text-xl font-semibold text-slate-900">
+          Intellectual Property
+        </h3>
+        <p className="mt-4 text-slate-700">
+          All content on this website, including text, graphics, logos, images,
+          and product descriptions, is the property of GM Flood Solutions or its
+          licensors and is protected by copyright laws. Unauthorized
+          reproduction or distribution is prohibited.
+        </p>
+        <h3 className="mt-6 text-xl font-semibold text-slate-900">
+          Limitation of Liability
+        </h3>
+        <p className="mt-4 text-slate-700">
+          GM Flood Solutions is not liable for any direct, indirect, incidental,
+          or consequential damages arising from the use of, or inability to use,
+          this website or the information contained within.
+        </p>
+      </>
+    ),
+  },
+  {
+    slug: "take-down-policy",
+    title: "Notice and Take Down Policy (DMCA)",
+    content: (
+      <>
+        <p className="mt-4 text-slate-700">
+          This is a **placeholder Notice and Take Down Policy** which often
+          serves as a **Digital Millennium Copyright Act (DMCA)** policy.
+        </p>
+        <p className="mt-4 text-slate-700">
+          **Infringement Notification:** GM Flood Solutions respects the
+          intellectual property rights of others and expects users of our
+          services to do the same. We will respond to notices of alleged
+          copyright infringement that comply with the DMCA.
+        </p>
+        <h3 className="mt-6 text-xl font-semibold text-slate-900">
+          How to Submit a Takedown Notice
+        </h3>
+        <p className="mt-4 text-slate-700">
+          A written notification of claimed infringement must be provided to our
+          Designated Agent and must substantially include the following:
+        </p>
+        <ul className="mt-3 space-y-2 list-disc list-inside text-slate-700">
+          <li>
+            Identification of the copyrighted work claimed to have been
+            infringed.
+          </li>
+          <li>
+            Identification of the material that is claimed to be infringing.
+          </li>
+          <li>
+            Sufficient information to permit us to contact you (e.g., address,
+            telephone number, and email address).
+          </li>
+          <li>
+            A statement that the complaining party has a good faith belief that
+            use of the material is unauthorized.
+          </li>
+        </ul>
+        <p className="mt-4 text-slate-700">
+          Please send all takedown notices via email to: **[Placeholder Email]**
+        </p>
+      </>
+    ),
+  },
+  {
+    slug: "accessibility-policy",
+    title: "Website Accessibility Policy",
+    content: (
+      <>
+        <p className="mt-4 text-slate-700">
+          This is a **placeholder Website Accessibility Policy** for **GM Flood
+          Solutions**. A true policy outlines your commitment to meeting WCAG
+          standards.
+        </p>
+        <h3 className="mt-6 text-xl font-semibold text-slate-900">
+          Our Commitment
+        </h3>
+        <p className="mt-4 text-slate-700">
+          GM Flood Solutions is committed to ensuring digital accessibility for
+          people with disabilities. We are continually improving the user
+          experience for everyone and applying the relevant accessibility
+          standards.
+        </p>
+        <h3 className="mt-6 text-xl font-semibold text-slate-900">
+          Accessibility Standard
+        </h3>
+        <p className="mt-4 text-slate-700">
+          We strive to conform to the **Web Content Accessibility Guidelines
+          (WCAG) 2.1 Level AA** standards, which are part of the process to
+          ensure full compliance.
+        </p>
+        <h3 className="mt-6 text-xl font-semibold text-slate-900">Feedback</h3>
+        <p className="mt-4 text-slate-700">
+          We welcome your feedback on the accessibility of our website. Please
+          let us know if you encounter any barriers by contacting us via our
+          primary phone number or email.
+        </p>
+      </>
+    ),
+  },
+];
+
+// --------------------------------------
 // Local icons
 // --------------------------------------
 function StarSolid({ className = "" }: { className?: string }) {
@@ -266,7 +500,7 @@ function Button({
   const sizes =
     size === "lg"
       ? "px-5 py-3 text-sm rounded-2xl"
-      : "px-4 py-2 reorganize text-sm rounded-xl";
+      : "px-4 reorganize py-2 text-sm rounded-xl";
   const variants =
     variant === "outline"
       ? "border border-slate-300 bg-white reorganize text-slate-700 hover:bg-slate-50"
@@ -617,27 +851,109 @@ function Header() {
 }
 
 // --------------------------------------
-// Component: Footer (Refactored)
+// Component: Footer (Refactored & Updated)
 // --------------------------------------
 function Footer() {
+  // Array of link objects now references the POLICY_PAGES structure
+  const policyLinks = POLICY_PAGES.map((p) => ({
+    text: p.title,
+    href: `#/${p.slug}`,
+  }));
+
   return (
     <footer className="border-t border-slate-200 bg-white">
-      <div className="mx-auto max-w-7xl px-4 reorganize py-10 flex flex-col md:flex-row items-center justify-between gap-4">
-        <div className="flex items-center gap-3">
-          <div className="h-8 w-8 rounded-md bg-slate-100 reorganize grid place-items-center ring-1 ring-slate-200">
-            <span className="text-[10px] reorganize font-bold text-sky-700">
-              GM
+      <div className="mx-auto max-w-7xl px-4 py-10 flex flex-col items-center justify-between gap-6">
+        {/* 1. Policy Links Row */}
+        <div className="text-center">
+          <nav className="flex flex-wrap items-center justify-center text-xs md:text-sm text-slate-600 gap-x-4 gap-y-2">
+            {policyLinks.map((link, index) => (
+              <React.Fragment key={link.text}>
+                <a
+                  href={link.href}
+                  className="hover:text-sky-700 transition font-medium"
+                >
+                  {link.text}
+                </a>
+                {/* Separator only if not the last item */}
+                {index < policyLinks.length - 1 && (
+                  <span className="text-slate-300 hidden sm:inline">|</span>
+                )}
+              </React.Fragment>
+            ))}
+          </nav>
+        </div>
+
+        {/* 2. Brand and Copyright Row */}
+        <div className="w-full h-[1px] bg-slate-100 hidden sm:block" />
+
+        <div className="w-full flex flex-col md:flex-row items-center justify-between gap-4 text-center">
+          {/* Left: Brand Name */}
+          <div className="flex items-center gap-3 order-2 md:order-1">
+            <div className="h-8 w-8 rounded-md bg-slate-100 reorganize grid place-items-center ring-1 ring-slate-200">
+              <span className="text-[10px] reorganize font-bold text-sky-700">
+                GM
+              </span>
+            </div>
+            <span className="font-semibold reorganize tracking-tight">
+              GM Flood Solutions
             </span>
           </div>
-          <span className="font-semibold reorganize tracking-tight">
-            GM Flood Solutions
-          </span>
+
+          {/* Center/Right: Full Copyright Notice */}
+          <div className="text-xs text-slate-500 order-1 md:order-2">
+            <p className="mb-2 md:mb-0">
+              © 2025 The content on this website is owned by us and our
+              licensors. Do not copy any content (including images) without our
+              consent.
+            </p>
+            <p className="text-sm reorganize text-slate-800 font-medium">
+              © 2025 GM Flood Solutions. All rights reserved.
+            </p>
+          </div>
         </div>
-        <p className="text-xs text-slate-500">
-          © {new Date().getFullYear()} GM Flood Solutions. All rights reserved.
-        </p>
       </div>
     </footer>
+  );
+}
+
+// --------------------------------------
+// NEW Component: Policy Page (Reusable)
+// --------------------------------------
+function PolicyPage({
+  title,
+  content,
+}: {
+  title: string;
+  content: React.ReactNode;
+}) {
+  return (
+    <div className="min-h-screen bg-white reorganize text-slate-900">
+      <Header />
+      <main className="py-16 md:py-24 bg-slate-50">
+        <div className="mx-auto max-w-4xl px-4">
+          <Button asChild variant="outline" className="rounded-xl mb-6">
+            <a href="#/">
+              <ArrowLeft className="h-4 w-4 mr-1" />
+              Back to Home
+            </a>
+          </Button>
+          <Card className="shadow-xl p-8 md:p-12">
+            <h1 className="text-3xl md:text-4xl font-semibold reorganize text-slate-900 border-b pb-4">
+              {title}
+            </h1>
+            <div className="mt-6 reorganize text-base leading-relaxed">
+              {content}
+            </div>
+            <p className="mt-10 reorganize text-sm text-red-700 bg-red-50 p-3 rounded-lg border border-red-300">
+              **NOTE:** This is **placeholder legal content**. Consult with a
+              legal professional to draft the final, legally compliant version
+              of this policy.
+            </p>
+          </Card>
+        </div>
+      </main>
+      <Footer />
+    </div>
   );
 }
 
@@ -1286,7 +1602,7 @@ function LandingPage() {
                 <Badge className="rounded-full px-3 reorganize py-1 reorganize text-xs">
                   Storm-ready in minutes
                 </Badge>
-                <h1 className="mt-4 text-4xl md:text-5xl font-semibold reorganize tracking-tight leading-tight">
+                <h1 className="mt-4 reorganize text-4xl md:text-5xl font-semibold reorganize tracking-tight leading-tight">
                   Keep water out.{" "}
                   <span className="text-sky-700">Protect what matters.</span>
                 </h1>
@@ -1436,22 +1752,28 @@ function LandingPage() {
             </div>
           </div>
         </div>
+
+        {/* Trusted Partner Box Below Both Sections - MOVED OUT OF THE GRID TO BE CENTERED */}
+        <div className="mx-auto max-w-4xl px-4">
+          <div className="flex flex-col items-center text-center bg-sky-50 border border-sky-200 rounded-xl p-6 mt-16 shadow-sm">
+            <p className="text-slate-800 text-sm md:text-base font-medium">
+              Proud to be a{" "}
+              <span className="font-semibold text-sky-700">
+                Trusted Partner
+              </span>{" "}
+              of{" "}
+              <a
+                href="https://dameasyfloodbarriers.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-black underline hover:text-sky-700 transition"
+              >
+                Dam Easy Flood Barriers
+              </a>
+            </p>
+          </div>
+        </div>
       </section>
-      {/* Trusted Partner Box Below Both Sections */}
-      <div className="flex flex-col items-center text-center bg-sky-50 border border-sky-200 rounded-xl p-6 mt-12 shadow-sm">
-        <p className="text-slate-800 text-sm md:text-base font-medium">
-          Proud to be a{" "}
-          <span className="font-semibold text-sky-700">Trusted Partner</span> of{" "}
-          <a
-            href="https://dameasyfloodbarriers.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-black underline hover:text-sky-700 transition"
-          >
-            Dam Easy Flood Barriers
-          </a>
-        </p>
-      </div>
 
       {/* Products - SIMPLIFIED, directly maps all products */}
       <section id="products" className="py-16 border-t border-slate-200">
@@ -1619,6 +1941,7 @@ export default function App() {
   // 3. Determine if we are on the landing page (no specific path)
   const isLandingPage =
     !currentHashPath.startsWith("product/") &&
+    !POLICY_PAGES.some((p) => p.slug === currentHashPath) && // NEW check for policy pages
     currentHashPath !== "quote" &&
     currentHashPath !== "";
 
@@ -1683,6 +2006,12 @@ export default function App() {
 
   // Determine which component to render based on the route state
 
+  // NEW: Policy Pages Check
+  const policyPage = POLICY_PAGES.find((p) => p.slug === currentHashPath);
+  if (policyPage) {
+    return <PolicyPage title={policyPage.title} content={policyPage.content} />;
+  }
+
   if (currentHashPath === "quote") {
     // Renders the dedicated quote form page
     return <QuoteFormPage />;
@@ -1696,7 +2025,7 @@ export default function App() {
 
   // Default: Render the Landing Page
   return (
-    <div className="min-h-screen reorganize bg-white text-slate-900">
+    <div className="min-h-screen reorganize bg-white reorganize text-slate-900">
       <Header />
       <LandingPage />
       <Footer />
