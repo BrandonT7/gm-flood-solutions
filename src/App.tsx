@@ -926,38 +926,21 @@ function Footer() {
   return (
     <footer className="border-t border-slate-200 bg-white">
       <div className="mx-auto max-w-7xl px-4 py-6 md:py-8">
-        {/* Footer Navigation Links */}
-        <div className="mx-auto w-full max-w-3xl text-xs md:text-sm text-slate-600">
-          <div className="flex flex-wrap gap-x-4 gap-y-2 justify-center md:justify-start">
+        {/* Centered Footer Links */}
+        <div className="w-full text-center text-xs md:text-sm text-slate-600">
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
             <a
               href="#/privacy-policy"
-              className="hover:text-sky-700 transition"
+              className="hover:text-sky-700 transition font-medium"
             >
               Privacy Policy
             </a>
+            <span className="text-slate-400">|</span>
             <a
               href="#/conditions-of-use"
-              className="hover:text-sky-700 transition"
+              className="hover:text-sky-700 transition font-medium"
             >
-              Conditions of Use
-            </a>
-            <a
-              href="#/manage-consent"
-              className="hover:text-sky-700 transition"
-            >
-              Manage Consent Preferences
-            </a>
-            <a href="#/do-not-share" className="hover:text-sky-700 transition">
-              Do Not Share My Information
-            </a>
-            <a
-              href="#/notice-takedown"
-              className="hover:text-sky-700 transition"
-            >
-              Notice and Take Down Policy
-            </a>
-            <a href="#/accessibility" className="hover:text-sky-700 transition">
-              Website Accessibility Policy
+              Terms of Service
             </a>
           </div>
         </div>
@@ -965,18 +948,16 @@ function Footer() {
         <div className="w-full h-px bg-slate-100 my-6" />
 
         {/* Footer Branding */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-3 text-center md:text-left">
+        <div className="flex flex-col items-center gap-3 text-center">
           <div className="flex items-center gap-2">
             <div className="h-7 w-7 rounded-md bg-slate-100 grid place-items-center ring-1 ring-slate-200">
               <span className="text-[10px] font-bold text-sky-700">GM</span>
             </div>
-            <span className="font-semibold tracking-tight">
+            <span className="font-semibold tracking-tight text-slate-800">
               GM Flood Solutions
             </span>
           </div>
-
-          {/* Copyright & Ownership Text */}
-          <div className="text-[11px] md:text-xs text-slate-500 leading-snug">
+          <div className="text-[11px] md:text-xs text-slate-500 leading-snug max-w-lg">
             <p className="mb-1">
               © {new Date().getFullYear()} The content on this website is owned
               by us and our licensors. Do not copy any content (including
@@ -992,7 +973,6 @@ function Footer() {
     </footer>
   );
 }
-
 // --------------------------------------
 // NEW Component: Video Carousel for Installation (UPDATED)
 // --------------------------------------
