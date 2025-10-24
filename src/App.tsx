@@ -1395,29 +1395,6 @@ function LandingPage() {
                 ))}
               </ul>
             </div>
-            <div className="flex flex-col items-center text-center bg-sky-50 border border-sky-200 rounded-xl p-6 mb-6 shadow-sm">
-              <img
-                src="/products/DamEasyBarrier(1).jpeg"
-                alt="Dam Easy Flood Barriers Logo"
-                className="h-12 md:h-16 object-contain mb-3"
-              />
-              <p className="text-slate-800 text-sm md:text-base font-medium">
-                Proud to be a{" "}
-                <span className="font-semibold text-sky-700">
-                  Trusted Partner
-                </span>{" "}
-                of{" "}
-                <a
-                  href="https://dameasyfloodbarriers.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-black underline hover:text-sky-700 transition"
-                >
-                  Dam Easy Flood Barriers
-                </a>{" "}
-                — Europe’s leading flood protection manufacturer.
-              </p>
-            </div>
 
             {/* Column 2: Why Choose Us */}
             <div>
@@ -1460,6 +1437,21 @@ function LandingPage() {
           </div>
         </div>
       </section>
+      {/* Trusted Partner Box Below Both Sections */}
+      <div className="flex flex-col items-center text-center bg-sky-50 border border-sky-200 rounded-xl p-6 mt-12 shadow-sm">
+        <p className="text-slate-800 text-sm md:text-base font-medium">
+          Proud to be a{" "}
+          <span className="font-semibold text-sky-700">Trusted Partner</span> of{" "}
+          <a
+            href="https://dameasyfloodbarriers.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-black underline hover:text-sky-700 transition"
+          >
+            Dam Easy Flood Barriers
+          </a>
+        </p>
+      </div>
 
       {/* Products - SIMPLIFIED, directly maps all products */}
       <section id="products" className="py-16 border-t border-slate-200">
