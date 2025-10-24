@@ -25,7 +25,7 @@ const PRODUCTS = [
     // REMOVED: category: "Residential",
     // END: RENAMED PRODUCT
     blurb:
-      "Trusted residential flood barrier solution with easy setup and proven results.",
+      "Trusted residential and commercial flood barrier solution with easy setup and proven results.",
     // UPDATED: Main product image is now the first newly uploaded image
     img: "products/DamEasyBarrier(4).jpeg",
     details: {
@@ -109,11 +109,11 @@ const PRODUCTS = [
     // REMOVED: category: "Commercial",
     // END: RENAMED PRODUCT
     blurb:
-      "Heavy-duty modular panels for storefronts, warehouses, and commercial entries.",
-    img: "https://placehold.co/1600x1200/1E293B/FFFFFF?text=Dam+Easy+Titan+Barrier", // Placeholder Image
+      "Heavy-duty modular panels for homes, storefronts, warehouses, and commercial entries.",
+    img: "products/titanbarrier (3).jpeg",
     details: {
       description:
-        "Designed for commercial applications, Titan barriers are modular and can be linked to cover massive spans. They are constructed from high-strength aluminum and are rated for the highest flood levels.",
+        "Designed for commercial and residential applications, Titan barriers are modular and can be linked to cover massive spans. They are constructed from high-strength aluminum and are rated for the highest flood levels.",
       features: [
         "Modular design for wide openings",
         "Heavy-duty aluminum construction",
@@ -128,32 +128,37 @@ const PRODUCTS = [
         {
           title: "Warehouse Entry Barrier",
           // ACTION REQUIRED: Replace with the actual image URL/path for Titan product
-          src: "https://placehold.co/600x450/1E293B/FFFFFF?text=Titan+Image+1",
+          src: "products/titanbarrier (3).jpeg",
         },
         {
           title: "Storefront Panel System",
           // ACTION REQUIRED: Replace with the actual image URL/path for Titan product
-          src: "https://placehold.co/600x450/1E293B/FFFFFF?text=Titan+Image+2",
+          src: "products/titanbarrier(1).jpeg",
         },
         {
           title: "Commercial Gate Coverage",
           // ACTION REQUIRED: Replace with the actual image URL/path for Titan product
-          src: "https://placehold.co/600x450/1E293B/FFFFFF?text=Titan+Image+3",
+          src: "products/titanbarrier (2).jpeg",
         },
         {
           title: "Modular System Setup",
           // ACTION REQUIRED: Replace with the actual image URL/path for Titan product
-          src: "https://placehold.co/600x450/1E293B/FFFFFF?text=Titan+Image+4",
+          src: "products/titanbarrier (4).jpeg",
         },
         {
           title: "High-Rise Protection",
           // ACTION REQUIRED: Replace with the actual image URL/path for Titan product
-          src: "https://placehold.co/600x450/1E293B/FFFFFF?text=Titan+Image+5",
+          src: "products/titanbarrier (4).png",
         },
         {
           title: "Side View Profile",
           // ACTION REQUIRED: Replace with the actual image URL/path for Titan product
-          src: "https://placehold.co/600x450/1E293B/FFFFFF?text=Titan+Image+6",
+          src: "products/titanbarrier (5).jpeg",
+        },
+        {
+          title: "Side View Profile",
+          // ACTION REQUIRED: Replace with the actual image URL/path for Titan product
+          src: "products/titanbarrier (6).jpeg",
         },
       ],
       // END: UPDATED EXAMPLE IMAGES
