@@ -142,6 +142,9 @@ const PRODUCTS = [
 ];
 
 // --------------------------------------
+// Policy Data Store (UPDATED WITH USER'S CONTENT)
+// --------------------------------------
+// --------------------------------------
 // Policy Data Store (GM-tailored)
 // --------------------------------------
 const POLICY_PAGES = [
