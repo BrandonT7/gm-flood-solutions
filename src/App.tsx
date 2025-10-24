@@ -144,9 +144,6 @@ const PRODUCTS = [
 // --------------------------------------
 // Policy Data Store (UPDATED WITH USER'S CONTENT)
 // --------------------------------------
-// --------------------------------------
-// Policy Data Store (GM-tailored)
-// --------------------------------------
 const POLICY_PAGES = [
   {
     slug: "privacy-policy",
@@ -157,202 +154,157 @@ const POLICY_PAGES = [
           <b>Effective Date:</b> October 2025
         </p>
         <p>
-          GM Flood Solutions (“we,” “us,” or “our”) respects your privacy. This
-          Policy explains what information we collect when you use our website,
-          how we use it, and the choices you have.
+          GM Flood Solutions (“GM Flood Solutions,” “we,” “us,” or “our”)
+          respects your privacy. This Privacy Policy explains what information
+          we collect through our website, how we use and share it, and the
+          choices you have. By using the site, you agree to this Policy.
         </p>
 
-        <h3>Information We Collect</h3>
+        <h3>1) Information We Collect</h3>
         <ul>
           <li>
-            <b>Information you provide:</b> name, email, phone, and any messages
-            you send.
+            <b>Information you provide:</b> name, email, phone, project details,
+            address (if shared), and messages you send via forms or email.
           </li>
           <li>
-            <b>Usage data:</b> pages viewed, device/browser type, and referral
-            source (basic analytics only).
+            <b>Usage & device data:</b> pages viewed, timestamps, referring
+            URLs, approximate location, IP address, and device/browser type.
           </li>
           <li>
-            <b>Cookies:</b> essentials for the site to work, plus optional
-            analytics; see
-            <a href="#/manage-consent"> Manage Consent Preferences</a>.
+            <b>Cookies & local storage:</b> essential cookies to run the site;
+            optional analytics cookies to understand traffic and improve
+            content.
           </li>
         </ul>
 
-        <h3>How We Use Information</h3>
+        <h3>2) How We Use Information</h3>
         <ul>
+          <li>Provide quotes, customer support, and respond to inquiries.</li>
           <li>
-            To answer quotes/support requests and operate/improve the site.
+            Operate, maintain, secure, and improve our website and services.
           </li>
           <li>
-            To communicate service updates or promotions (you can opt out
-            anytime).
+            Send service communications and relevant offers (you can opt out).
           </li>
-          <li>To comply with legal obligations and enforce our policies.</li>
+          <li>
+            Comply with legal obligations; protect our rights, users, and the
+            public.
+          </li>
         </ul>
 
-        <h3>When We Share Information</h3>
+        <h3>3) When We Share Information</h3>
         <p>
           We do <b>not</b> sell personal information. We may share limited data
-          with service providers (hosting, basic analytics) under
-          confidentiality, or disclose information if required by law or in a
-          business transfer.
+          with service providers (e.g., hosting, analytics, email delivery)
+          under contracts that restrict their use of your data. We may disclose
+          information if required by law, in response to valid legal process, or
+          in connection with a merger, acquisition, or asset transfer.
         </p>
 
-        <h3>Data Retention</h3>
-        <p>
-          We retain personal data only as long as necessary for the purposes
-          above or as required by law.
-        </p>
-
-        <h3>Your Choices</h3>
+        <h3>4) Cookies, Analytics & Your Choices</h3>
         <ul>
-          <li>Request updates or deletion by contacting us.</li>
           <li>
-            Adjust cookies under{" "}
-            <a href="#/manage-consent">Manage Consent Preferences</a>.
+            <b>Essential cookies</b> are required for security and basic
+            functionality.
           </li>
-          <li>Opt out of non-essential emails at any time.</li>
+          <li>
+            <b>Analytics cookies</b> (if enabled) help us measure performance
+            and improve the site.
+          </li>
+          <li>
+            <b>Your controls:</b> most browsers let you block/delete cookies.
+            You can also contact us to ask that we avoid using analytics for
+            your visits where feasible.
+          </li>
         </ul>
 
-        <h3>Security</h3>
+        <h3>5) Data Retention</h3>
         <p>
-          We use reasonable safeguards, but no system is 100% secure. Please use
-          caution online.
+          We keep personal data only as long as reasonably necessary for the
+          purposes above or as required by law (e.g., records, security, dispute
+          resolution).
         </p>
 
-        <h3>Children’s Privacy</h3>
+        <h3>6) Security</h3>
         <p>
-          Our website is not intended for children under 13, and we do not
-          knowingly collect their data.
+          We use reasonable administrative, organizational, and technical
+          measures appropriate for a small business. No method of transmission
+          or storage is 100% secure; please transmit data with care.
         </p>
 
-        <h3>Governing Law</h3>
-        <p>This Policy is governed by the laws of the State of Florida.</p>
-
-        <h3>Changes to This Policy</h3>
+        <h3>7) Your Rights & Requests</h3>
+        <ul>
+          <li>
+            Access, correct, or delete certain personal information we hold
+            about you.
+          </li>
+          <li>Opt out of non-essential communications.</li>
+          <li>Ask questions about our data practices.</li>
+        </ul>
         <p>
-          We may update this Policy from time to time. See the “Effective Date”
-          above.
+          We may request limited information to verify your identity before
+          fulfilling certain requests.
         </p>
 
-        <h3>How to Contact GM Flood Solutions</h3>
+        <h3>8) Children’s Privacy</h3>
+        <p>
+          Our website is not directed to children under 13, and we do not
+          knowingly collect their personal information.
+        </p>
+
+        <h3>9) Third-Party Links</h3>
+        <p>
+          Our site may link to third-party websites (e.g., product partners).
+          Their privacy practices are governed by their own policies.
+        </p>
+
+        <h3>10) International Visitors</h3>
+        <p>
+          We operate in the United States. If you access the site from outside
+          the U.S., you consent to the transfer of your information to the U.S.
+          and the application of U.S. law.
+        </p>
+
+        <h3>11) Governing Law</h3>
+        <p>
+          This Privacy Policy is governed by the laws of the{" "}
+          <b>State of Florida</b>, without regard to conflict-of-laws rules.
+        </p>
+
+        <h3>12) Changes to This Policy</h3>
+        <p>
+          We may update this Policy from time to time. The Effective Date above
+          shows the latest revision. Material changes will be highlighted on
+          this page.
+        </p>
+
+        <h3>13) Contact GM Flood Solutions</h3>
         <ul>
           <li>
             Email:{" "}
-            <a className="underline" href="mailto:gmfloodsolutions@gmail.com">
+            <a
+              className="underline text-sky-600"
+              href="mailto:gmfloodsolutions@gmail.com"
+            >
               gmfloodsolutions@gmail.com
             </a>
           </li>
           <li>
             Phone:{" "}
-            <a className="underline" href="tel:7277934584">
+            <a className="underline text-sky-600" href="tel:7277934584">
               (727) 793-4584
             </a>
           </li>
           <li>
-            <i>No physical mailing address at this time.</i>
-          </li>
-        </ul>
-      </div>
-    ),
-  },
-
-  {
-    slug: "manage-consent",
-    title: "Manage Consent Preferences",
-    content: (
-      <div className="prose prose-slate max-w-none">
-        <p>
-          We use minimal cookies and similar technologies to run this website
-          and improve your experience. Essential cookies are always on;
-          analytics are optional.
-        </p>
-
-        <h3>Categories</h3>
-        <ul>
-          <li>
-            <b>Essential:</b> Core functionality (routing, security).{" "}
-            <i>Always on.</i>
-          </li>
-          <li>
-            <b>Analytics (optional):</b> Helps us understand traffic and
-            performance.
+            <i>
+              No physical mailing address at this time. Please contact us via
+              email or phone.
+            </i>
           </li>
         </ul>
 
-        <h3>Your Controls</h3>
-        <p>
-          Use the toggle below to save your analytics preference (stored in your
-          browser).
-        </p>
-
-        <div className="not-prose mt-4 p-4 border rounded-lg bg-slate-50 text-slate-700">
-          <label className="flex items-center gap-3">
-            <input type="checkbox" defaultChecked disabled />{" "}
-            <span>Essential (required)</span>
-          </label>
-          <label className="flex items-center gap-3 mt-2">
-            <input id="analytics-consent" type="checkbox" defaultChecked />
-            <span>Analytics (optional)</span>
-          </label>
-          <button
-            onClick={() => {
-              const ok = (
-                document.getElementById("analytics-consent") as HTMLInputElement
-              )?.checked;
-              localStorage.setItem("analytics-consent", ok ? "yes" : "no");
-              alert("Preferences saved.");
-            }}
-            className="mt-3 inline-flex items-center rounded-md border px-3 py-1.5 text-sm hover:bg-slate-50"
-          >
-            Save Preferences
-          </button>
-        </div>
-
-        <p className="text-sm text-slate-500 mt-4">
-          Last updated: October 2025.
-        </p>
-        <hr className="my-6" />
-        <p className="text-sm">
-          Need help? Email{" "}
-          <a className="underline" href="mailto:gmfloodsolutions@gmail.com">
-            gmfloodsolutions@gmail.com
-          </a>
-          .
-        </p>
-      </div>
-    ),
-  },
-
-  {
-    slug: "do-not-share",
-    title: "Do Not Share My Information",
-    content: (
-      <div className="prose prose-slate max-w-none">
-        <p>
-          We do not sell personal information. If you want to restrict any
-          sharing with service providers beyond what’s necessary to run our
-          website, contact us and we’ll honor your request to the extent
-          applicable.
-        </p>
-        <h3>Submit a Request</h3>
-        <ul>
-          <li>
-            Email:{" "}
-            <a className="underline" href="mailto:gmfloodsolutions@gmail.com">
-              gmfloodsolutions@gmail.com
-            </a>
-          </li>
-          <li>
-            Phone:{" "}
-            <a className="underline" href="tel:7277934584">
-              (727) 793-4584
-            </a>
-          </li>
-        </ul>
-        <p className="text-sm text-slate-500 mt-4">
-          Last updated: October 2025.
+        <p className="text-sm text-slate-500 mt-6">
+          © {new Date().getFullYear()} GM Flood Solutions. All rights reserved.
         </p>
       </div>
     ),
@@ -360,142 +312,115 @@ const POLICY_PAGES = [
 
   {
     slug: "conditions-of-use",
-    title: "Conditions of Use",
+    title: "Terms of Service",
     content: (
       <div className="prose prose-slate max-w-none">
         <p>
           <b>Effective Date:</b> October 2025
         </p>
         <p>
-          By using this website, you agree to these Conditions. If you do not
-          agree, please do not use the site.
+          These Terms of Service (“Terms”) govern your use of the GM Flood
+          Solutions website (the “Site”). By accessing or using the Site, you
+          agree to these Terms. If you do not agree, do not use the Site.
         </p>
 
-        <h3>Acceptable Use</h3>
+        <h3>1) Acceptable Use</h3>
         <ul>
-          <li>No misuse (security breaches, scraping, illegal activity).</li>
           <li>
-            No infringement of intellectual property or violation of laws.
-          </li>
-          <li>No interference with normal operation of the site.</li>
-        </ul>
-
-        <h3>Intellectual Property</h3>
-        <p>
-          All content (text, logos, images, layouts) is owned by GM Flood
-          Solutions or licensors. Do not copy or distribute without permission.
-        </p>
-
-        <h3>Disclaimer; Limitation of Liability</h3>
-        <p>
-          The site is provided “as is.” To the fullest extent permitted by law,
-          we disclaim all warranties and are not liable for indirect or
-          consequential damages.
-        </p>
-
-        <h3>Governing Law</h3>
-        <p>
-          These Conditions are governed by the laws of the{" "}
-          <b>State of Florida</b>.
-        </p>
-
-        <h3>Changes</h3>
-        <p>
-          We may update these Conditions at any time; continued use means you
-          accept the changes.
-        </p>
-
-        <p className="text-sm text-slate-500 mt-4">
-          Revised October 2025. © All rights reserved.
-        </p>
-      </div>
-    ),
-  },
-
-  {
-    slug: "take-down-policy",
-    title: "Notice and Take Down Policy",
-    content: (
-      <div className="prose prose-slate max-w-none">
-        <p>
-          We respect intellectual property and legal rights. If you believe
-          content on our site is unlawful or infringes your rights, notify us
-          and we will review and respond appropriately.
-        </p>
-
-        <h3>How to Submit a Notice</h3>
-        <ul>
-          <li>Description and URL/location of the material at issue.</li>
-          <li>Your name and contact information (email and phone).</li>
-          <li>
-            Basis of your claim (copyright, trademark, defamation) and
-            supporting details.
+            Do not interfere with, disrupt, or attempt to breach the Site’s
+            security or availability.
           </li>
           <li>
-            A good-faith statement that the use is not authorized and the
-            information is accurate.
+            Do not use the Site for unlawful purposes or to infringe the rights
+            of others.
+          </li>
+          <li>
+            Do not upload or transmit malicious code, spam, or automated
+            requests.
           </li>
         </ul>
 
-        <div className="not-prose mt-3 p-4 border rounded-lg bg-slate-50 text-slate-700">
-          <p className="font-semibold">
-            GM Flood Solutions – Designated Contact
-          </p>
-          <p>
-            Email:{" "}
-            <a href="mailto:gmfloodsolutions@gmail.com" className="underline">
-              gmfloodsolutions@gmail.com
-            </a>
-          </p>
-          <p>
-            Phone:{" "}
-            <a href="tel:7277934584" className="underline">
-              (727) 793-4584
-            </a>
-          </p>
-          <p className="text-sm text-slate-500 mt-2">
-            No physical mailing address at this time.
-          </p>
-        </div>
-
-        <h3>Process</h3>
+        <h3>2) Intellectual Property</h3>
         <p>
-          After a valid notice, we may remove or restrict access to the material
-          and notify the user who posted it. We may request additional
-          information to evaluate the claim.
+          The Site and its content (including text, logos, images, and layouts)
+          are owned by GM Flood Solutions or our licensors and protected by law.
+          You may not copy, reproduce, or distribute content without our prior
+          written permission.
         </p>
 
-        <p className="text-sm text-slate-500 mt-4">
-          Last updated: October 2025.
-        </p>
-      </div>
-    ),
-  },
-
-  {
-    slug: "accessibility-policy",
-    title: "Website Accessibility Policy",
-    content: (
-      <div className="prose prose-slate max-w-none">
+        <h3>3) Product Information, Quotes & No Professional Advice</h3>
         <p>
-          GM Flood Solutions is committed to providing a website accessible to
-          the widest possible audience, regardless of technology or ability.
+          Product descriptions, specifications, pricing, and availability on the
+          Site are for general information and may change. Quotes are estimates
+          based on the information you provide and may be adjusted after a site
+          visit or additional evaluation. Content on this Site does not
+          constitute engineering, legal, or other professional advice.
         </p>
 
-        <h3>Our Approach</h3>
-        <ul>
-          <li>Semantic HTML, headings, and labels where possible.</li>
-          <li>Text alternatives for non-text content where feasible.</li>
-          <li>Readable contrast and keyboard-accessible controls.</li>
-        </ul>
-
-        <h3>Ongoing Effort</h3>
+        <h3>4) Third-Party Links</h3>
         <p>
-          Accessibility is ongoing. If you experience difficulty, please contact
-          us.
+          The Site may link to third-party websites for convenience (e.g.,
+          product partners). We are not responsible for their content or
+          practices.
         </p>
 
-        <h3>Contact</h3>
+        <h3>5) Disclaimer of Warranties</h3>
+        <p>
+          THE SITE IS PROVIDED “AS IS” AND “AS AVAILABLE.” TO THE MAXIMUM EXTENT
+          PERMITTED BY LAW, WE DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED,
+          INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND
+          NON-INFRINGEMENT. WE DO NOT WARRANT THAT THE SITE WILL BE
+          UNINTERRUPTED OR ERROR-FREE.
+        </p>
+
+        <h3>6) Limitation of Liability</h3>
+        <p>
+          TO THE FULLEST EXTENT PERMITTED BY LAW, GM FLOOD SOLUTIONS AND ITS
+          OWNERS, EMPLOYEES, AND AGENTS SHALL NOT BE LIABLE FOR ANY INDIRECT,
+          INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING OUT OF
+          OR RELATING TO YOUR USE OF THE SITE, EVEN IF ADVISED OF THE
+          POSSIBILITY OF SUCH DAMAGES.
+        </p>
+
+        <h3>7) Indemnification</h3>
+        <p>
+          You agree to indemnify and hold GM Flood Solutions harmless from
+          claims, damages, liabilities, and expenses (including reasonable
+          attorneys’ fees) arising out of your violation of these Terms or
+          misuse of the Site.
+        </p>
+
+        <h3>8) Termination</h3>
+        <p>
+          We may suspend or terminate your access to the Site at any time for
+          any reason, including violation of these Terms.
+        </p>
+
+        <h3>9) Governing Law & Venue</h3>
+        <p>
+          These Terms are governed by the laws of the <b>State of Florida</b>,
+          without regard to conflict-of-laws rules. You agree to the exclusive
+          jurisdiction and venue of the state and federal courts located in
+          Florida for any dispute arising from or relating to these Terms or
+          your use of the Site.
+        </p>
+
+        <h3>10) Severability; Entire Agreement</h3>
+        <p>
+          If any provision of these Terms is found unenforceable, the remaining
+          provisions will remain in full force. These Terms constitute the
+          entire agreement between you and GM Flood Solutions regarding your use
+          of the Site.
+        </p>
+
+        <h3>11) Changes to These Terms</h3>
+        <p>
+          We may update these Terms from time to time. Changes are effective
+          when posted. Continued use of the Site after changes means you accept
+          the updated Terms.
+        </p>
+
+        <h3>12) Contact</h3>
         <ul>
           <li>
             Email:{" "}
@@ -511,8 +436,8 @@ const POLICY_PAGES = [
           </li>
         </ul>
 
-        <p className="text-sm text-slate-500 mt-4">
-          Last updated: October 2025.
+        <p className="text-sm text-slate-500 mt-6">
+          © {new Date().getFullYear()} GM Flood Solutions. All rights reserved.
         </p>
       </div>
     ),
@@ -998,106 +923,73 @@ function Header() {
 // Component: Footer (Refactored & Updated)
 // --------------------------------------
 function Footer() {
-  // Array of link objects now references the POLICY_PAGES structure
-  const policyLinks = POLICY_PAGES.map((p) => ({
-    text: p.title,
-    href: `#/${p.slug}`,
-  }));
-
   return (
     <footer className="border-t border-slate-200 bg-white">
-      <div className="mx-auto max-w-7xl px-4 py-10 flex flex-col items-center justify-between gap-6">
-        {/* 1. Policy Links Row */}
-        <div className="text-center">
-          <nav className="flex flex-wrap items-center justify-center text-xs md:text-sm text-slate-600 gap-x-4 gap-y-2">
-            {policyLinks.map((link, index) => (
-              <React.Fragment key={link.text}>
-                <a
-                  href={link.href}
-                  className="hover:text-sky-700 transition font-medium"
-                >
-                  {link.text}
-                </a>
-                {/* Separator only if not the last item */}
-                {index < policyLinks.length - 1 && (
-                  <span className="text-slate-300 hidden sm:inline">|</span>
-                )}
-              </React.Fragment>
-            ))}
-          </nav>
+      <div className="mx-auto max-w-7xl px-4 py-6 md:py-8">
+        {/* Footer Navigation Links */}
+        <div className="mx-auto w-full max-w-3xl text-xs md:text-sm text-slate-600">
+          <div className="flex flex-wrap gap-x-4 gap-y-2 justify-center md:justify-start">
+            <a
+              href="#/privacy-policy"
+              className="hover:text-sky-700 transition"
+            >
+              Privacy Policy
+            </a>
+            <a
+              href="#/conditions-of-use"
+              className="hover:text-sky-700 transition"
+            >
+              Conditions of Use
+            </a>
+            <a
+              href="#/manage-consent"
+              className="hover:text-sky-700 transition"
+            >
+              Manage Consent Preferences
+            </a>
+            <a href="#/do-not-share" className="hover:text-sky-700 transition">
+              Do Not Share My Information
+            </a>
+            <a
+              href="#/notice-takedown"
+              className="hover:text-sky-700 transition"
+            >
+              Notice and Take Down Policy
+            </a>
+            <a href="#/accessibility" className="hover:text-sky-700 transition">
+              Website Accessibility Policy
+            </a>
+          </div>
         </div>
 
-        {/* 2. Brand and Copyright Row */}
-        <div className="w-full h-[1px] bg-slate-100 hidden sm:block" />
+        <div className="w-full h-px bg-slate-100 my-6" />
 
-        <div className="w-full flex flex-col md:flex-row items-center justify-between gap-4 text-center">
-          {/* Left: Brand Name */}
-          <div className="flex items-center gap-3 order-2 md:order-1">
-            <div className="h-8 w-8 rounded-md bg-slate-100 reorganize grid place-items-center ring-1 ring-slate-200">
-              <span className="text-[10px] reorganize font-bold text-sky-700">
-                GM
-              </span>
+        {/* Footer Branding */}
+        <div className="flex flex-col md:flex-row items-center justify-between gap-3 text-center md:text-left">
+          <div className="flex items-center gap-2">
+            <div className="h-7 w-7 rounded-md bg-slate-100 grid place-items-center ring-1 ring-slate-200">
+              <span className="text-[10px] font-bold text-sky-700">GM</span>
             </div>
-            <span className="font-semibold reorganize tracking-tight">
+            <span className="font-semibold tracking-tight">
               GM Flood Solutions
             </span>
           </div>
 
-          {/* Center/Right: Full Copyright Notice */}
-          <div className="text-xs text-slate-500 order-1 md:order-2">
-            <p className="mb-2 md:mb-0">
-              © 2025 The content on this website is owned by us and our
-              licensors. Do not copy any content (including images) without our
-              consent.
+          {/* Copyright & Ownership Text */}
+          <div className="text-[11px] md:text-xs text-slate-500 leading-snug">
+            <p className="mb-1">
+              © {new Date().getFullYear()} The content on this website is owned
+              by us and our licensors. Do not copy any content (including
+              images) without consent.
             </p>
-            <p className="text-sm reorganize text-slate-800 font-medium">
-              © 2025 GM Flood Solutions. All rights reserved.
+            <p className="text-slate-700 font-medium">
+              © {new Date().getFullYear()} GM Flood Solutions. All rights
+              reserved.
             </p>
           </div>
         </div>
       </div>
     </footer>
-  );
-}
-
-// --------------------------------------
-// NEW Component: Policy Page (Reusable)
-// --------------------------------------
-function PolicyPage({
-  title,
-  content,
-}: {
-  title: string;
-  content: React.ReactNode;
-}) {
-  return (
-    <div className="min-h-screen bg-white reorganize text-slate-900">
-      <Header />
-      <main className="py-16 md:py-24 bg-slate-50">
-        <div className="mx-auto max-w-4xl px-4">
-          <Button asChild variant="outline" className="rounded-xl mb-6">
-            <a href="#/">
-              <ArrowLeft className="h-4 w-4 mr-1" />
-              Back to Home
-            </a>
-          </Button>
-          <Card className="shadow-xl p-8 md:p-12">
-            <h1 className="text-3xl md:text-4xl font-semibold reorganize text-slate-900 border-b pb-4">
-              {title}
-            </h1>
-            <div className="mt-6 reorganize text-base leading-relaxed">
-              {content}
-            </div>
-            <p className="mt-10 reorganize text-sm text-red-700 bg-red-50 p-3 rounded-lg border border-red-300">
-              **NOTE:** This legal content was provided by the site owner and
-              should be reviewed periodically for compliance with applicable
-              laws.
-            </p>
-          </Card>
-        </div>
-      </main>
-      <Footer />
-    </div>
   );
 }
 
@@ -2151,16 +2043,29 @@ export default function App() {
   // Determine which component to render based on the route state
 
   // NEW: Policy Pages Check
+  // Simple component to render a policy page
+  const PolicyPage: React.FC<{ title: string; content: React.ReactNode }> = ({
+    title,
+    content,
+  }) => (
+    <div className="mx-auto max-w-3xl px-4 py-8">
+      <h1 className="text-2xl md:text-3xl font-bold text-slate-900">{title}</h1>
+      <div className="mt-6">{content}</div>
+    </div>
+  );
+
+  // NEW: Policy Pages Check (fixed)
   const policyPage = POLICY_PAGES.find((p) => p.slug === currentHashPath);
   if (policyPage) {
     return <PolicyPage title={policyPage.title} content={policyPage.content} />;
   }
 
+  // Quote page check
   if (currentHashPath === "quote") {
-    // Renders the dedicated quote form page
     return <QuoteFormPage />;
   }
 
+  // Product detail check
   if (currentHashPath.startsWith("product/")) {
     const slug = currentHashPath.split("product/")[1];
     const product = PRODUCTS.find((p) => p.slug === slug);
