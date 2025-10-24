@@ -142,761 +142,376 @@ const PRODUCTS = [
 ];
 
 // --------------------------------------
-// Policy Data Store (UPDATED WITH USER'S CONTENT)
+// Policy Data Store (GM-tailored)
 // --------------------------------------
 const POLICY_PAGES = [
   {
     slug: "privacy-policy",
     title: "Privacy Policy",
     content: (
-      <>
-        <p className="mt-4 text-slate-700">
-          GM Flood Solutions is committed to protecting and respecting your
-          privacy. This Privacy Policy (this “Policy”) describes how **GM Flood
-          Solutions** collects, uses, and discloses personal information of
-          users of our services, including our Website (our “Site”). Please read
-          this Privacy Policy carefully.
+      <div className="prose prose-slate max-w-none">
+        <p>
+          <b>Effective Date:</b> October 2025
         </p>
-        <p className="mt-4 text-slate-700">
-          By using our Site, you agree to the terms of this Policy. If you do
-          not agree with the terms of this Policy, do not use our Site. Your use
-          of our Site for the limited and exclusive purpose of reviewing this
-          Policy does not constitute your agreement to this Policy unless you
-          make further use of our Site. This Policy may be updated from time to
-          time.
+        <p>
+          GM Flood Solutions (“we,” “us,” or “our”) respects your privacy. This
+          Policy explains what information we collect when you use our website,
+          how we use it, and the choices you have.
         </p>
-        <p className="mt-4 text-slate-700">This Policy describes:</p>
-        <ul className="mt-3 space-y-2 list-disc list-inside text-slate-700">
-          <li>The personal information GM Flood Solutions collects</li>
-          <li>How GM Flood Solutions collects such information</li>
-          <li>How such information is used</li>
-          <li>How such information is shared</li>
-          <li>How you can contact GM Flood Solutions</li>
-        </ul>
 
-        <h3 className="mt-6 text-xl font-semibold text-slate-900">
-          INFORMATION GM FLOOD SOLUTIONS COLLECTS
-        </h3>
-        <p className="mt-4 text-slate-700">
-          GM Flood Solutions and our third-party service providers may collect
-          and process the following types of personal information about you:
-        </p>
-        <ul className="mt-3 space-y-2 list-disc list-inside text-slate-700">
-          <li>Name</li>
-          <li>Phone number</li>
-          <li>Email address</li>
-          <li>Social network profile information</li>
+        <h3>Information We Collect</h3>
+        <ul>
           <li>
-            Information we collect when you use our Site, such as your domain
-            name, Internet protocol (IP) address, mobile device model, Internet
-            service provider, Site access times, websites that referred you to
-            us and web pages within our Site that you visit
+            <b>Information you provide:</b> name, email, phone, and any messages
+            you send.
           </li>
           <li>
-            Information you communicate to us through our Site, our social media
-            pages or through other means
+            <b>Usage data:</b> pages viewed, device/browser type, and referral
+            source (basic analytics only).
+          </li>
+          <li>
+            <b>Cookies:</b> essentials for the site to work, plus optional
+            analytics; see
+            <a href="#/manage-consent"> Manage Consent Preferences</a>.
           </li>
         </ul>
 
-        <h3 className="mt-6 text-xl font-semibold text-slate-900">
-          HOW GM FLOOD SOLUTIONS COLLECTS INFORMATION
-        </h3>
-        <p className="mt-4 text-slate-700">
-          GM Flood Solutions and our third-party service providers may collect
-          personal information as follows:
-        </p>
-        <ul className="mt-3 space-y-2 list-disc list-inside text-slate-700">
+        <h3>How We Use Information</h3>
+        <ul>
           <li>
-            We may collect information you provide when you use our Site,
-            including when you fill in forms on our Site, subscribe to any of
-            our services, complete a survey on our Site, post material to our
-            Site or download content from our Site.
+            To answer quotes/support requests and operate/improve the site.
           </li>
           <li>
-            We may collect information you provide when you contact us by phone,
-            email, text message or messaging application on social media.
+            To communicate service updates or promotions (you can opt out
+            anytime).
           </li>
-          <li>
-            We may collect social network profile information that you have made
-            publicly available through your social network account settings if
-            you choose to access our social media pages or connect or otherwise
-            link to our Site with your own social media page. We also may
-            collect customers’ and public feedback on social media.
-          </li>
-          <li>
-            Our Site may use cookies, tracking pixels and other similar
-            technologies to collect information about visitors to our Site. A
-            cookie is a small amount of data that is sent to your browser from a
-            Web server and stored on your computer's hard drive. A tracking
-            pixel is a graphic that is loaded when a user visits a website or
-            opens an email and is used to track certain user activities.
-          </li>
+          <li>To comply with legal obligations and enforce our policies.</li>
         </ul>
 
-        <h3 className="mt-6 text-xl font-semibold text-slate-900">
-          HOW GM FLOOD SOLUTIONS USES THE INFORMATION COLLECTED
-        </h3>
-        <p className="mt-4 text-slate-700">
-          GM Flood Solutions and our third-party service providers may use
-          information collected to:
+        <h3>When We Share Information</h3>
+        <p>
+          We do <b>not</b> sell personal information. We may share limited data
+          with service providers (hosting, basic analytics) under
+          confidentiality, or disclose information if required by law or in a
+          business transfer.
         </p>
-        <ul className="mt-3 space-y-2 list-disc list-inside text-slate-700">
-          <li>Operate, maintain and improve our Site.</li>
+
+        <h3>Data Retention</h3>
+        <p>
+          We retain personal data only as long as necessary for the purposes
+          above or as required by law.
+        </p>
+
+        <h3>Your Choices</h3>
+        <ul>
+          <li>Request updates or deletion by contacting us.</li>
           <li>
-            Conduct analytics to help us better understand our customers and
-            improve our products and services.
+            Adjust cookies under{" "}
+            <a href="#/manage-consent">Manage Consent Preferences</a>.
           </li>
-          <li>Process and manage purchases made by you.</li>
-          <li>
-            Respond to your customer service inquiries, post your comments
-            related to our products and services on our social network pages and
-            take other actions in response to your questions, comments or Site
-            activity.
-          </li>
-          <li>
-            Communicate with you about special offers, services and promotions
-            that may be of interest to you.
-          </li>
-          <li>
-            Help us develop, customize, deliver, support and improve our
-            services.
-          </li>
-          <li>
-            Allow you to participate in interactive features of our service when
-            you choose to do so.
-          </li>
-          <li>Notify you about changes to our service.</li>
-          <li>
-            Conduct market research in order to serve targeted advertisements.
-          </li>
+          <li>Opt out of non-essential emails at any time.</li>
         </ul>
 
-        <p className="mt-4 text-slate-700">
-          GM Flood Solutions and our third-party service providers may use the
-          information collected from cookies, tracking pixels and other similar
-          technologies to target advertising to you personally, through online
-          and offline methods including email, display media, video media and
-          direct mail. You may opt out of receiving direct mail from us or our
-          third-party service providers by clicking{" "}
-          <a href="#/do-not-share" className="text-sky-600 underline">
-            here
-          </a>
-          . For detailed information on the cookies we use and the purposes for
-          which we use them see our{" "}
-          <a href="#/manage-consent" className="text-sky-600 underline">
-            Cookie Policy
-          </a>
-          .
-        </p>
-        <p className="mt-4 text-slate-700">
-          When you log in to or visit our Site, your IP address may be combined
-          with other de-identified data (such as a hashed, non-readable email or
-          postal address) and such information may be used by third-party
-          service providers to send ads and materials to you based on your
-          preferences, interests and attributes. Such information may also be
-          combined with aggregate information collected from other users or
-          sources and used by third-party service providers to conduct market
-          research and to better target their advertising. Although you may not
-          opt out of receiving online advertisements generally, you may find out
-          how to opt out of having your online behavior collected by third-party
-          advertisers for advertising purposes. You may visit each ad network's
-          website individually to opt-out and review their privacy policies, or
-          you may visit the Digital Advertising Alliance’s opt-out website at{" "}
-          <a
-            href="http://www.aboutads.info/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sky-600 underline"
-          >
-            http://www.aboutads.info/
-          </a>{" "}
-          or the Network Advertising Initiative’s opt-out website at{" "}
-          <a
-            href="http://networkadvertising.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sky-600 underline"
-          >
-            http://networkadvertising.org/
-          </a>
-          .
+        <h3>Security</h3>
+        <p>
+          We use reasonable safeguards, but no system is 100% secure. Please use
+          caution online.
         </p>
 
-        <h3 className="mt-6 text-xl font-semibold text-slate-900">
-          HOW GM FLOOD SOLUTIONS DISCLOSES THE INFORMATION COLLECTED
-        </h3>
-        <p className="mt-4 text-slate-700">
-          GM Flood Solutions and our third-party service providers may share
-          your personal information under the following circumstances:
-        </p>
-        <ul className="mt-3 space-y-2 list-disc list-inside text-slate-700">
-          <li>
-            We may share your personal information with any member of our group
-            of companies (our subsidiaries and our ultimate parent company and
-            its subsidiaries).
-          </li>
-          <li>
-            We may share your personal information with companies that provide
-            services to us, such as credit card processors, website hosts, email
-            vendors and other companies that help us provide our services or our
-            Site.
-          </li>
-          <li>
-            We may disclose your personal information in response to legal
-            process, when required to comply with laws, to combat fraudulent or
-            criminal activity, to enforce our agreements, corporate policies and
-            the terms of use of our Site, and to protect the rights, property
-            and safety of our business, our employees, agents, customers or
-            others.
-          </li>
-          <li>
-            We may share technical data that we collect about your browsing
-            habits and your device (such as data collected via our cookies,
-            tracking pixels and similar technologies, as discussed above) with
-            third-party service providers and other advertising companies. This
-            enables them and us to better target ads to you and other consumers.
-          </li>
-        </ul>
-
-        <h3 className="mt-6 text-xl font-semibold text-slate-900">
-          HOW TO CONTACT GM FLOOD SOLUTIONS
-        </h3>
-        <p className="mt-4 text-slate-700">
-          If you have any questions, comments or requests regarding this Policy,
-          please contact us using the contact information shown on our Site, or
-          call us directly at **(727) 793-4584**.
-        </p>
-        <p className="mt-8 reorganize text-sm text-slate-500">
-          Last Updated: October 2025 (Revising August 2018 content)
-        </p>
-      </>
-    ),
-  },
-  {
-    slug: "manage-consent",
-    title: "Cookie Policy",
-    content: (
-      <>
-        <h3 className="mt-6 text-xl font-semibold text-slate-900">
-          What are Cookies?
-        </h3>
-        <p className="mt-4 text-slate-700">
-          GM Flood Solutions and our business partners collect information about
-          your use of our website through cookies. **Cookies** are information
-          files stored on your computer, tablet or smartphone that help websites
-          remember who you are and information about your visit. Cookies can
-          help to display the information on a website in a way that matches
-          your interests. Most major websites use cookies.
+        <h3>Children’s Privacy</h3>
+        <p>
+          Our website is not intended for children under 13, and we do not
+          knowingly collect their data.
         </p>
 
-        <h3 className="mt-6 text-xl font-semibold text-slate-900">
-          What Cookies are Used on the GM Flood Solutions Website?
-        </h3>
-        <p className="mt-4 text-slate-700">
-          The cookies and other tracking technologies GM Flood Solutions and our
-          business partners use on this website are broadly grouped into the
-          following categories:
-        </p>
-        <ul className="mt-3 space-y-2 list-disc list-inside text-slate-700">
-          <li>
-            **Essential** – Some of the cookies on our website are essential for
-            us to be able to provide you with a service you have requested.
-            These cookies are required to enable our website to work correctly
-            or to comply with applicable law – for example, to allow you to
-            navigate our website and use essential features or to ensure that
-            our website is secure. You may not be able to use our website
-            without these cookies.
-          </li>
-          <li>
-            **Analytics** – We use analytics cookies to help us understand how
-            users engage with our website. An example is counting the number of
-            different people coming to our website or using a particular
-            feature, rather than the total number of times the site or feature
-            is used. We would find it difficult to analyze how well our website
-            was performing and improve it without these cookies.
-          </li>
-          <li>
-            **Functional** – We use cookies to improve your experience by
-            remembering your preferences so we know how you like to use our
-            website. Examples of this would be remembering you so that you are
-            served with the same content or to remember you when you come back
-            to the site.
-          </li>
-          <li>
-            **Social** – We use third-party cookies to allow you to share
-            content directly on social networking sites like Facebook and X
-            (formerly known as Twitter) to improve your experience by
-            remembering your preferences so we know how you like to use our
-            website – for example, if you wanted to “like” or “tweet” about us
-            or our products or services.
-          </li>
-          <li>
-            **Interest-Based Advertising** – You will have noticed that when you
-            visit websites you will be shown ads for products and services you
-            may wish to buy. To try and ensure that the ads you see are relevant
-            to you, third-party cookies may be used to collect information about
-            the types of things that interest you -- for example, websites you
-            visit and the geography that you are based in. Having these cookies
-            does not increase the number of ads you will be shown, but simply
-            makes the ads you see more relevant.
-          </li>
-        </ul>
+        <h3>Governing Law</h3>
+        <p>This Policy is governed by the laws of the State of Florida.</p>
 
-        <h3 className="mt-6 text-xl font-semibold text-slate-900">
-          How can I Reject or Opt-Out of Receiving Cookies?
-        </h3>
-        <p className="mt-4 text-slate-700">
-          If you do not wish cookies to be stored on your machine, you can
-          delete the cookies from your browser. Most browsers also allow you to
-          prevent all or some cookies being stored on your machine in the
-          future. For more information on how to delete or disable cookies from
-          your browser please use the “help” function within your browser or
-          alternatively visit{" "}
-          <a
-            href="http://www.allaboutcookies.org"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sky-600 underline"
-          >
-            http://www.allaboutcookies.org
-          </a>
-          .
-        </p>
-        <p className="mt-4 text-slate-700">
-          Please note that we can’t always control third-party cookies stored on
-          your machine from our website and where this is the case you will need
-          to visit the relevant third party’s website directly to manage cookies
-          stored on your machine by them.
+        <h3>Changes to This Policy</h3>
+        <p>
+          We may update this Policy from time to time. See the “Effective Date”
+          above.
         </p>
 
-        <h3 className="mt-6 text-xl font-semibold text-slate-900">
-          Third-Party Cookies (Interest-Based Advertising)
-        </h3>
-        <p className="mt-4 text-slate-700">
-          Some of the cookies described above are stored on your machine by
-          third parties when you use our website. Third parties may also read
-          cookies on your browser to collect information or to serve content or
-          advertisements to you. For more information on these cookies and how
-          to disable them, please see the Internet Advertising Bureau website at{" "}
-          <a
-            href="http://www.youronlinechoices.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sky-600 underline"
-          >
-            http://www.youronlinechoices.com/
-          </a>{" "}
-          where you will be able to opt-out of receiving Interest-Based
-          Advertising cookies from some third parties.
-        </p>
-        <div className="mt-6 reorganize p-4 border rounded-lg bg-sky-50 border-sky-200">
-          <h4 className="font-semibold text-sky-800 mb-2">
-            Third-Party Ad Network Opt-Out Links:
-          </h4>
-          <ul className="space-y-1 text-sm reorganize text-sky-700">
-            <li>
-              **Google:** For more information and to opt out:{" "}
-              <a
-                href="https://policies.google.com/privacy#infochoices"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline"
-              >
-                https://policies.google.com/privacy#infochoices
-              </a>
-            </li>
-            <li>
-              **Microsoft (Bing):** For more information and to opt out:{" "}
-              <a
-                href="https://choice.microsoft.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline"
-              >
-                https://choice.microsoft.com
-              </a>
-            </li>
-            <li>
-              **Meta (formerly Facebook):** For more information and to opt out:{" "}
-              <a
-                href="http://www.facebook.com/about/privacy/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline"
-              >
-                http://www.facebook.com/about/privacy/
-              </a>
-            </li>
-            <li>
-              **iPromote:** More information and to opt out:{" "}
-              <a
-                href="http://www.ipromote.com/privacy-policy/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline"
-              >
-                http://www.ipromote.com/privacy-policy/
-              </a>
-            </li>
-          </ul>
-        </div>
-        <p className="mt-8 reorganize text-sm text-slate-500">
-          Last Changed: July 8, 2024.
-        </p>
-      </>
-    ),
-  },
-  {
-    slug: "do-not-share",
-    title: "Do Not Share My Personal Information",
-    content: (
-      <>
-        <h3 className="mt-6 text-xl font-semibold text-slate-900">
-          Opt-Out from the Sharing of Personal Information
-        </h3>
-        <p className="mt-4 text-slate-700">
-          Residents of certain states (including California, Virginia, Colorado,
-          Connecticut and Utah, Texas and Oregon) have the right under certain
-          circumstances to opt out from the sale or sharing of their personal
-          information for purposes of targeting advertising to such persons.
-        </p>
-        <p className="mt-4 text-slate-700">
-          The use of certain third-party cookies and other tracking devices on
-          this site may be considered “sharing” under those states’ laws. If you
-          are a resident of any of those states and you would like to opt out
-          from the “sharing” of personal information, please visit the sites
-          listed in our{" "}
-          <a href="#/manage-consent" className="text-sky-600 underline">
-            Cookie Policy
-          </a>{" "}
-          section for third-party opt-outs.
-        </p>
-        <div className="mt-6 p-4 border rounded-lg bg-yellow-50 border-yellow-200">
-          <p className="text-lg font-semibold text-yellow-800">
-            To submit an opt-out request or for assistance, please call:
-          </p>
-          <p className="text-2xl font-bold text-yellow-900 mt-2">
-            <a href="tel:7277934584" className="hover:text-yellow-700">
+        <h3>How to Contact GM Flood Solutions</h3>
+        <ul>
+          <li>
+            Email:{" "}
+            <a className="underline" href="mailto:gmfloodsolutions@gmail.com">
+              gmfloodsolutions@gmail.com
+            </a>
+          </li>
+          <li>
+            Phone:{" "}
+            <a className="underline" href="tel:7277934584">
               (727) 793-4584
             </a>
-          </p>
-        </div>
-      </>
+          </li>
+          <li>
+            <i>No physical mailing address at this time.</i>
+          </li>
+        </ul>
+      </div>
     ),
   },
+
+  {
+    slug: "manage-consent",
+    title: "Manage Consent Preferences",
+    content: (
+      <div className="prose prose-slate max-w-none">
+        <p>
+          We use minimal cookies and similar technologies to run this website
+          and improve your experience. Essential cookies are always on;
+          analytics are optional.
+        </p>
+
+        <h3>Categories</h3>
+        <ul>
+          <li>
+            <b>Essential:</b> Core functionality (routing, security).{" "}
+            <i>Always on.</i>
+          </li>
+          <li>
+            <b>Analytics (optional):</b> Helps us understand traffic and
+            performance.
+          </li>
+        </ul>
+
+        <h3>Your Controls</h3>
+        <p>
+          Use the toggle below to save your analytics preference (stored in your
+          browser).
+        </p>
+
+        <div className="not-prose mt-4 p-4 border rounded-lg bg-slate-50 text-slate-700">
+          <label className="flex items-center gap-3">
+            <input type="checkbox" defaultChecked disabled />{" "}
+            <span>Essential (required)</span>
+          </label>
+          <label className="flex items-center gap-3 mt-2">
+            <input id="analytics-consent" type="checkbox" defaultChecked />
+            <span>Analytics (optional)</span>
+          </label>
+          <button
+            onClick={() => {
+              const ok = (
+                document.getElementById("analytics-consent") as HTMLInputElement
+              )?.checked;
+              localStorage.setItem("analytics-consent", ok ? "yes" : "no");
+              alert("Preferences saved.");
+            }}
+            className="mt-3 inline-flex items-center rounded-md border px-3 py-1.5 text-sm hover:bg-slate-50"
+          >
+            Save Preferences
+          </button>
+        </div>
+
+        <p className="text-sm text-slate-500 mt-4">
+          Last updated: October 2025.
+        </p>
+        <hr className="my-6" />
+        <p className="text-sm">
+          Need help? Email{" "}
+          <a className="underline" href="mailto:gmfloodsolutions@gmail.com">
+            gmfloodsolutions@gmail.com
+          </a>
+          .
+        </p>
+      </div>
+    ),
+  },
+
+  {
+    slug: "do-not-share",
+    title: "Do Not Share My Information",
+    content: (
+      <div className="prose prose-slate max-w-none">
+        <p>
+          We do not sell personal information. If you want to restrict any
+          sharing with service providers beyond what’s necessary to run our
+          website, contact us and we’ll honor your request to the extent
+          applicable.
+        </p>
+        <h3>Submit a Request</h3>
+        <ul>
+          <li>
+            Email:{" "}
+            <a className="underline" href="mailto:gmfloodsolutions@gmail.com">
+              gmfloodsolutions@gmail.com
+            </a>
+          </li>
+          <li>
+            Phone:{" "}
+            <a className="underline" href="tel:7277934584">
+              (727) 793-4584
+            </a>
+          </li>
+        </ul>
+        <p className="text-sm text-slate-500 mt-4">
+          Last updated: October 2025.
+        </p>
+      </div>
+    ),
+  },
+
   {
     slug: "conditions-of-use",
-    title: "Conditions of Use (Terms of Service)",
+    title: "Conditions of Use",
     content: (
-      <>
-        <h3 className="mt-6 text-xl font-semibold text-slate-900">
-          About These Conditions
-        </h3>
-        <p className="mt-4 text-slate-700">
-          This website promotes the business referred to as **GM Flood
-          Solutions**. Throughout these conditions, **GM Flood Solutions** will
-          be referred to as **‘we’** and/or **’our’**.
+      <div className="prose prose-slate max-w-none">
+        <p>
+          <b>Effective Date:</b> October 2025
         </p>
-        <p className="mt-4 text-slate-700">
-          If you access or use any part of this website you agree to these
-          conditions. If you do not want to agree to these conditions, do not
-          access or use this website. We may change these conditions at any time
-          without giving you notice. By continuing to use the website you agree
-          to all the changes we make.
-        </p>
-        <p className="mt-4 text-slate-700">
-          We collect and use information in line with our{" "}
-          <a href="#/privacy-policy" className="text-sky-600 underline">
-            Privacy Policy
-          </a>
-          . By using this website, you agree to the way in which we collect and
-          use your information.
+        <p>
+          By using this website, you agree to these Conditions. If you do not
+          agree, please do not use the site.
         </p>
 
-        <h3 className="mt-6 text-xl font-semibold text-slate-900">
-          Intellectual Property Rights
-        </h3>
-        <p className="mt-4 text-slate-700">
-          A wide range of intellectual property rights are used in and relating
-          to this website, including:
-        </p>
-        <ul className="mt-3 space-y-2 list-disc list-inside text-slate-700">
-          <li>The trademarks and logos;</li>
+        <h3>Acceptable Use</h3>
+        <ul>
+          <li>No misuse (security breaches, scraping, illegal activity).</li>
           <li>
-            The design, text, graphics and other content of the web pages on
-            this website, together with all the web addresses associated with
-            those web pages; and
+            No infringement of intellectual property or violation of laws.
           </li>
-          <li>All the software used in relation to this website.</li>
-        </ul>
-        <p className="mt-4 text-slate-700 font-semibold">
-          GM Flood Solutions is the owner or the authorized licensee of these
-          intellectual property rights. You agree not to copy any content
-          (including images) on this website without our consent.
-        </p>
-
-        <h3 className="mt-6 text-xl font-semibold text-slate-900">
-          Restrictions on Use
-        </h3>
-        <p className="mt-4 text-slate-700">
-          You cannot use this website for any unlawful purpose, to send spam, to
-          harm or harass another person, or in a way that is offensive,
-          unacceptable, or damaging to GM Flood Solutions, our customers, or
-          suppliers. Specifically, you may not:
-        </p>
-        <ul className="mt-3 space-y-2 list-disc list-inside text-slate-700">
-          <li>
-            Create, check, confirm, update or amend your own or someone else's
-            databases, records, or customer lists.
-          </li>
-          <li>Tamper with, update or change any part of the website.</li>
-          <li>
-            Use any automated means to monitor or copy the website or its
-            content without permission.
-          </li>
+          <li>No interference with normal operation of the site.</li>
         </ul>
 
-        <h3 className="mt-6 text-xl font-semibold text-slate-900">
-          User Content and Permissions
-        </h3>
-        <p className="mt-4 text-slate-700">
-          If you provide any material to this website (e.g., ratings, reviews,
-          comments, articles, or uploaded content) (each “User Content”), you
-          agree to grant GM Flood Solutions permission, irrevocably and free of
-          charge, to use User Content (including altering and adapting it) in
-          any media worldwide, for our own marketing, research, and promotional
-          activities and our internal business purposes.
-        </p>
-        <p className="mt-4 text-slate-700">
-          **You own your User Content at all times**, and you continue to have
-          the right to use it in any way you choose. By providing User Content,
-          you confirm it is your own original work, will not contain anything
-          illegal, harmful, or defamatory, and does not contain any virus or
-          other damaging code.
-        </p>
-        <p className="mt-4 text-slate-700">
-          GM Flood Solutions has no obligation to publish your User Content and
-          retains the right to remove any User Content at any time and for any
-          reason. We do not edit, pre-vet, or review any User Content displayed
-          on the Website.
+        <h3>Intellectual Property</h3>
+        <p>
+          All content (text, logos, images, layouts) is owned by GM Flood
+          Solutions or licensors. Do not copy or distribute without permission.
         </p>
 
-        <h3 className="mt-6 text-xl font-semibold text-slate-900">
-          Message Scanning
-        </h3>
-        <p className="mt-4 text-slate-700">
-          This website is provided by Hibu Inc. ("Hibu"). Hibu shall have the
-          right to scan messages sent using the contact form on this website
-          manually and automatically and to store such messages. Any personal
-          data you include in such messages may be used by Hibu for purposes
-          associated with provision of this website and services, disclosed
-          where required by law, and used where any of your actions have
-          breached these Conditions of Use.
+        <h3>Disclaimer; Limitation of Liability</h3>
+        <p>
+          The site is provided “as is.” To the fullest extent permitted by law,
+          we disclaim all warranties and are not liable for indirect or
+          consequential damages.
         </p>
 
-        <h3 className="mt-6 text-xl font-semibold text-slate-900">
-          Disclaimers and Limits to Our Liability
-        </h3>
-        <ul className="mt-3 space-y-2 list-disc list-inside text-slate-700">
-          <li>
-            **You use the website at your own risk.** You should not rely on the
-            website for advice.
-          </li>
-          <li>
-            As far as the relevant laws allow, GM Flood Solutions does not
-            guarantee that there will be no problems with how you use the
-            website or that the server is free of viruses or other harmful
-            programs.
-          </li>
-          <li>
-            Under no circumstances will GM Flood Solutions be liable for any
-            loss of profits, business, goodwill, or corruption to information.
-          </li>
-          <li>
-            If we do not keep to these conditions, we will only be liable for
-            losses you have suffered as a **direct result**. We are not liable
-            for any other losses resulting from external factors, theft,
-            viruses, or relying on external, linked websites.
-          </li>
-        </ul>
+        <h3>Governing Law</h3>
+        <p>
+          These Conditions are governed by the laws of the{" "}
+          <b>State of Florida</b>.
+        </p>
 
-        <h3 className="mt-6 text-xl font-semibold text-slate-900">
-          Governing Law
-        </h3>
-        <p className="mt-4 text-slate-700">
-          These conditions make up the whole agreement between you and GM Flood
-          Solutions in how you use the website. The laws of the **State of New
-          York** (without reference to its conflict of laws principles) apply to
-          your use of the website and these conditions. By using the website you
-          agree that the laws of the State of New York will apply to everything
-          relating to you using the website.
+        <h3>Changes</h3>
+        <p>
+          We may update these Conditions at any time; continued use means you
+          accept the changes.
         </p>
-        <p className="mt-8 reorganize text-sm text-slate-500">
-          Revised April 2021. © All rights reserved.
+
+        <p className="text-sm text-slate-500 mt-4">
+          Revised October 2025. © All rights reserved.
         </p>
-      </>
+      </div>
     ),
   },
+
   {
     slug: "take-down-policy",
     title: "Notice and Take Down Policy",
     content: (
-      <>
-        <h2 className="text-2xl md:text-3xl font-semibold reorganize text-slate-900">
-          GM Flood Solutions Defamation, Copyright and Trademark Infringement
-          Policy
-        </h2>
-        <p className="mt-4 text-slate-700">
-          As a responsible website publisher, **GM Flood Solutions** supports
-          the protection of your reputation and the protection of your
-          intellectual property rights. We do not edit, pre-vet, or review any
-          third-party material displayed on this website. We operate a **notice
-          and take down procedure** regarding such material.
-        </p>
-        <p className="mt-4 text-slate-700 font-semibold">
-          **Please be aware that providing false or misleading information in
-          the notification of claim may result in civil and/or criminal
-          liability.**
+      <div className="prose prose-slate max-w-none">
+        <p>
+          We respect intellectual property and legal rights. If you believe
+          content on our site is unlawful or infringes your rights, notify us
+          and we will review and respond appropriately.
         </p>
 
-        <h3 className="mt-6 text-xl font-semibold text-slate-900">
-          Notice and Procedure for Claims of Defamation
-        </h3>
-        <p className="mt-4 text-slate-700">
-          If you believe that any content on this website contains statements
-          that are defamatory to you, please email our Designated Agent:
-          **inappropriatecontent@hibu.com**.
-        </p>
-        <p className="mt-4 text-slate-700">
-          Your written notification must include: your contact information,
-          identification and location of the defamatory content, a statement as
-          to why the content is untrue and damaging to you, and a good faith
-          statement, submitted under the penalty of perjury, that the
-          information is accurate and true.
-        </p>
+        <h3>How to Submit a Notice</h3>
+        <ul>
+          <li>Description and URL/location of the material at issue.</li>
+          <li>Your name and contact information (email and phone).</li>
+          <li>
+            Basis of your claim (copyright, trademark, defamation) and
+            supporting details.
+          </li>
+          <li>
+            A good-faith statement that the use is not authorized and the
+            information is accurate.
+          </li>
+        </ul>
 
-        <h3 className="mt-6 text-xl font-semibold text-slate-900">
-          Notice and Procedure for Claims of Copyright Infringement
-        </h3>
-        <p className="mt-4 text-slate-700">
-          If you believe that your copyright has been infringed on this website,
-          written notification must be submitted to the following Designated
-          Agent:
-        </p>
-        <div className="mt-3 reorganize p-4 border rounded-lg bg-slate-50 border-slate-200 text-slate-700">
-          <p className="font-semibold">GM Flood Solutions Legal Department</p>
+        <div className="not-prose mt-3 p-4 border rounded-lg bg-slate-50 text-slate-700">
+          <p className="font-semibold">
+            GM Flood Solutions – Designated Contact
+          </p>
           <p>
-            **Designated Email:**{" "}
-            <a
-              href="mailto:inappropriatecontent@hibu.com"
-              className="underline"
-            >
-              inappropriatecontent@hibu.com
+            Email:{" "}
+            <a href="mailto:gmfloodsolutions@gmail.com" className="underline">
+              gmfloodsolutions@gmail.com
             </a>
           </p>
           <p>
-            **Mailing Address:** Hibu Inc. Legal Department, P.O. Box 354, East
-            Meadow, New York 11554
+            Phone:{" "}
+            <a href="tel:7277934584" className="underline">
+              (727) 793-4584
+            </a>
+          </p>
+          <p className="text-sm text-slate-500 mt-2">
+            No physical mailing address at this time.
           </p>
         </div>
-        <p className="mt-4 text-slate-700">
-          To be effective, the notification must include: a physical or
-          electronic signature of the copyright owner's representative,
-          identification of the copyrighted work and the infringing material,
-          sufficient contact information, and statements of good faith belief
-          and accuracy, made under penalty of perjury.
+
+        <h3>Process</h3>
+        <p>
+          After a valid notice, we may remove or restrict access to the material
+          and notify the user who posted it. We may request additional
+          information to evaluate the claim.
         </p>
 
-        <h3 className="mt-6 text-xl font-semibold text-slate-900">
-          Notice and Procedure for Claims of Trademark Infringement
-        </h3>
-        <p className="mt-4 text-slate-700">
-          If you believe that any content on this website has infringed your
-          trademark, please email our Designated Agent:
-          **inappropriatecontent@hibu.com**.
+        <p className="text-sm text-slate-500 mt-4">
+          Last updated: October 2025.
         </p>
-        <p className="mt-4 text-slate-700">
-          Your written notification must include: identification of the
-          trademark claimed to be infringed, identification of all the
-          infringing material, sufficient contact information, and statements of
-          good faith belief and accuracy, made under penalty of perjury.
-        </p>
-
-        <h3 className="mt-6 text-xl font-semibold text-slate-900">
-          Repeat Infringers
-        </h3>
-        <p className="mt-4 text-slate-700">
-          It is our policy in appropriate circumstances to disable and/or
-          terminate the accounts of users who are repeat infringers.
-        </p>
-        <p className="mt-8 reorganize text-sm text-slate-500">
-          Last Updated: May 2018. © All rights reserved.
-        </p>
-      </>
+      </div>
     ),
   },
+
   {
     slug: "accessibility-policy",
     title: "Website Accessibility Policy",
     content: (
-      <>
-        <h2 className="text-2xl md:text-3xl font-semibold reorganize text-slate-900">
-          GM Flood Solutions Website Accessibility Statement
-        </h2>
-        <h3 className="mt-6 text-xl font-semibold text-slate-900">
-          GM Flood Solutions Values Digital Inclusion
-        </h3>
-        <p className="mt-4 text-slate-700">
-          **GM Flood Solutions** is committed to providing a fully accessible
-          and optimized experience for all of our website visitors. We strive to
-          ensure that our website is usable by people with disabilities,
-          including those using assistive technologies such as screen readers or
-          magnifiers.
+      <div className="prose prose-slate max-w-none">
+        <p>
+          GM Flood Solutions is committed to providing a website accessible to
+          the widest possible audience, regardless of technology or ability.
         </p>
 
-        <h3 className="mt-6 text-xl font-semibold text-slate-900">
-          Our Commitment to Standards
-        </h3>
-        <p className="mt-4 text-slate-700">
-          GM Flood Solutions endeavors to increase conformance with the **Web
-          Content Accessibility Guidelines (WCAG) 2.2, Level AA** Success
-          Criteria. We are continually working to improve the user experience
-          for everyone and applying the relevant accessibility standards to our
-          digital presence.
+        <h3>Our Approach</h3>
+        <ul>
+          <li>Semantic HTML, headings, and labels where possible.</li>
+          <li>Text alternatives for non-text content where feasible.</li>
+          <li>Readable contrast and keyboard-accessible controls.</li>
+        </ul>
+
+        <h3>Ongoing Effort</h3>
+        <p>
+          Accessibility is ongoing. If you experience difficulty, please contact
+          us.
         </p>
 
-        <h3 className="mt-6 text-xl font-semibold text-slate-900">
-          Third-Party Sites
-        </h3>
-        <p className="mt-4 text-slate-700">
-          Throughout this website, we may use different third-party websites
-          such as Facebook, Google Maps, X, and YouTube to spread news and
-          information about our products and services. These websites are not
-          controlled by GM Flood Solutions and may present challenges for
-          individuals with disabilities that we are not able to control or
-          remedy.
-        </p>
-
-        <h3 className="mt-6 text-xl font-semibold text-slate-900">Feedback</h3>
-        <p className="mt-4 text-slate-700">
-          Notice an accessibility barrier? We welcome your feedback on the
-          accessibility of our website. Please let us know if you encounter any
-          barriers by contacting us directly.
-        </p>
-        <div className="mt-6 reorganize p-4 border rounded-lg bg-sky-50 border-sky-200">
-          <p className="text-lg font-semibold text-sky-800">
-            Report an issue or request assistance:
-          </p>
-          <p className="text-xl font-bold text-sky-900 mt-2">
-            <a href="tel:7277934584" className="hover:text-sky-700">
+        <h3>Contact</h3>
+        <ul>
+          <li>
+            Email:{" "}
+            <a className="underline" href="mailto:gmfloodsolutions@gmail.com">
+              gmfloodsolutions@gmail.com
+            </a>
+          </li>
+          <li>
+            Phone:{" "}
+            <a className="underline" href="tel:7277934584">
               (727) 793-4584
             </a>
-          </p>
-        </div>
-        <p className="mt-8 reorganize text-sm text-slate-500">
-          Last Updated: October 2025.
+          </li>
+        </ul>
+
+        <p className="text-sm text-slate-500 mt-4">
+          Last updated: October 2025.
         </p>
-      </>
+      </div>
     ),
   },
 ];
