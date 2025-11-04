@@ -196,26 +196,6 @@ const PRODUCTS = [
           // ACTION REQUIRED: Replace with the actual image URL/path for Titan product
           src: "products/titanbarrier (6).jpeg",
         },
-        {
-          title: "Side View Profile",
-          // ACTION REQUIRED: Replace with the actual image URL/path for Titan product
-          src: "products/titanbarrier (6).jpeg",
-        },
-        {
-          title: "Side View Profile",
-          // ACTION REQUIRED: Replace with the actual image URL/path for Titan product
-          src: "products/titanbarrier (6).jpeg",
-        },
-        {
-          title: "Side View Profile",
-          // ACTION REQUIRED: Replace with the actual image URL/path for Titan product
-          src: "products/titanbarrier (6).jpeg",
-        },
-        {
-          title: "Side View Profile",
-          // ACTION REQUIRED: Replace with the actual image URL/path for Titan product
-          src: "products/titanbarrier (6).jpeg",
-        },
       ],
       // END: UPDATED EXAMPLE IMAGES
     },
