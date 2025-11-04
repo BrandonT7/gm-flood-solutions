@@ -27,7 +27,7 @@ const PRODUCTS = [
     blurb:
       "Trusted residential and commercial flood barrier solution with easy setup and proven results.",
     // UPDATED: Main product image is now the first newly uploaded image
-    img: "products/DamEasyBarrier(4).jpeg",
+    img: "products/DamEasyBarrier(11).jpeg",
     details: {
       description:
         "The Dam Easy barrier uses a patented inflatable seal and adjustable width to create a watertight fit in minutes. It requires no permanent fixings and is easily stored when not needed.",
