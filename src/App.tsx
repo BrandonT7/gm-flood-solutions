@@ -1546,19 +1546,15 @@ function QuoteFormPage() {
   );
 }
 // --------------------------------------
-// NEW Component: Gallery Page
+// Component: Gallery Page (FINAL FIXED VERSION)
 // --------------------------------------
 function GalleryPage() {
-  // If your images are named 1.jpg ... 56.jpg:
+  // Matches your actual filenames:
+  // "GeneralGallery (1).JPG", "GeneralGallery (2).JPG", ..., "GeneralGallery (56).JPG"
   const GALLERY_IMAGES = Array.from(
     { length: 56 },
-    (_, i) => `/gallery/GeneralGallery(${i + 1}).jpg`
+    (_, i) => `/gallery/${encodeURIComponent(`GeneralGallery (${i + 1}).JPG`)}`
   );
-
-  // If your extensions vary, replace the line above with an explicit list, e.g.:
-  // const GALLERY_IMAGES = [
-  //   "/gallery/1.jpeg", "/gallery/2.png", ... "/gallery/56.jpg"
-  // ];
 
   return (
     <div className="min-h-screen bg-white text-slate-900">
