@@ -61,43 +61,43 @@ const PRODUCTS = [
       exampleImages: [
         {
           title: "Residential Gateway",
-          src: "uploaded:DamEasyBarrier(1).jpg-2679b3cd-62dd-4d1f-b8c9-7b555603adeb",
+          src: "products/DamEasyBarrier(1).jpeg",
         },
         {
           title: "Home Entry Protection",
-          src: "uploaded:DamEasyBarrier(7).jpeg-8429ed2b-a5fa-4f82-bfda-104b8aa8e2e6",
+          src: "products/DamEasyBarrier(2).jpeg",
         },
         {
           title: "Driveway Entrance",
-          src: "uploaded:DamEasyBarrier(2).jpg-4e8ea8b3-b29c-453b-ba75-9606e865d0ab",
+          src: "products/DamEasyBarrier(3).jpeg",
         },
         {
           title: "Garage Opening Covered",
-          src: "uploaded:DamEasyBarrier(10).jpg-3b236d9a-5104-48ad-b36e-b51f825de282",
+          src: "products/DamEasyBarrier(4).jpeg",
         },
         {
           title: "Storefront Door",
-          src: "uploaded:DamEasyBarrier(3).jpeg-65ffde87-b9b8-4217-99b8-bbabec35b2d3",
+          src: "products/DamEasyBarrier(5).jpeg",
         },
         {
           title: "Commercial Frontage",
-          src: "uploaded:DamEasyBarrier(5).jpeg-5b362a5a-cf36-424b-a287-a279fc4ce1af",
+          src: "products/DamEasyBarrier(6).jpeg",
         },
         {
           title: "Patio Access Protection",
-          src: "uploaded:DamEasyBarrier(6).jpg-f5d3381-ba79-4ea1-b6ae-3a67df1560ff",
+          src: "products/DamEasyBarrier(7).jpeg",
         },
         {
           title: "Waterfront Property",
-          src: "uploaded:DamEasyBarrier(9).jpg-beeb8cd1-29c9-4849-aeea-3c0d3cfb665",
+          src: "products/DamEasyBarrier(8).jpeg",
         },
         {
           title: "Entryway Coverage",
-          src: "uploaded:DamEasyBarrier(4).jpeg-3af2e4db-3658-43f9-afb0-a2dc35130d8",
+          src: "products/DamEasyBarrier(9).jpeg",
         },
         {
           title: "Business Entrance",
-          src: "uploaded:DamEasyBarrier(8).jpeg-a87029e9-4986-4660-a2ca-cb9e2c514327",
+          src: "products/DamEasyBarrier(10).jpeg",
         },
       ],
     },
