@@ -99,6 +99,42 @@ const PRODUCTS = [
           title: "Business Entrance",
           src: "products/DamEasyBarrier(10).jpeg",
         },
+        {
+          title: "Business Entrance",
+          src: "products/DamEasyBarrier(11).jpeg",
+        },
+        {
+          title: "Business Entrance",
+          src: "products/DamEasyBarrier(12).jpeg",
+        },
+        {
+          title: "Business Entrance",
+          src: "products/DamEasyBarrier(13).jpeg",
+        },
+        {
+          title: "Business Entrance",
+          src: "products/DamEasyBarrier(14).jpeg",
+        },
+        {
+          title: "Business Entrance",
+          src: "products/DamEasyBarrier(15).jpeg",
+        },
+        {
+          title: "Business Entrance",
+          src: "products/DamEasyBarrier(16).jpeg",
+        },
+        {
+          title: "Business Entrance",
+          src: "products/DamEasyBarrier(17).jpeg",
+        },
+        {
+          title: "Business Entrance",
+          src: "products/DamEasyBarrier(18).jpeg",
+        },
+        {
+          title: "Business Entrance",
+          src: "products/DamEasyBarrier(19).jpeg",
+        },
       ],
     },
   },
