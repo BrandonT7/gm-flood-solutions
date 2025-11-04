@@ -196,6 +196,26 @@ const PRODUCTS = [
           // ACTION REQUIRED: Replace with the actual image URL/path for Titan product
           src: "products/titanbarrier (6).jpeg",
         },
+        {
+          title: "Side View Profile",
+          // ACTION REQUIRED: Replace with the actual image URL/path for Titan product
+          src: "products/titanbarrier (6).jpeg",
+        },
+        {
+          title: "Side View Profile",
+          // ACTION REQUIRED: Replace with the actual image URL/path for Titan product
+          src: "products/titanbarrier (6).jpeg",
+        },
+        {
+          title: "Side View Profile",
+          // ACTION REQUIRED: Replace with the actual image URL/path for Titan product
+          src: "products/titanbarrier (6).jpeg",
+        },
+        {
+          title: "Side View Profile",
+          // ACTION REQUIRED: Replace with the actual image URL/path for Titan product
+          src: "products/titanbarrier (6).jpeg",
+        },
       ],
       // END: UPDATED EXAMPLE IMAGES
     },
@@ -1247,24 +1267,31 @@ function ProductDetailPage({
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 reorganize lg:grid-cols-3 gap-6">
                 {/* Changed to lg:grid-cols-3 to display 6 images well (2 rows of 3) */}
-                {details.exampleImages.map((image, i) => (
-                  <div
-                    key={i}
-                    className="relative aspect-[4/3] w-full reorganize rounded-2xl bg-slate-100 overflow-hidden shadow-md"
-                  >
-                    <img
-                      // The image source is set here using the provided contentFetchId path
-                      src={image.src}
-                      alt={image.title}
-                      className="h-full w-full object-cover"
-                      // Fallback in case the uploaded image path fails
-                      onError={(e) => {
-                        e.currentTarget.onerror = null;
-                        e.currentTarget.src = `https://placehold.co/600x450/9CA3AF/1F2937?text=${image.title}`;
-                      }}
-                    />
-                  </div>
-                ))}
+                {details.exampleImages.map((image, i) => {
+                  const href = encodeURI(image.src); // handles spaces like "titanbarrier (3).jpeg"
+                  return (
+                    <a
+                      key={i}
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="relative block aspect-[4/3] w-full rounded-2xl bg-slate-100 overflow-hidden shadow-md group"
+                      title={image.title}
+                    >
+                      <img
+                        src={href}
+                        alt={image.title}
+                        className="h-full w-full object-cover transition-transform duration-200 group-hover:scale-105"
+                        onError={(e) => {
+                          e.currentTarget.onerror = null;
+                          e.currentTarget.src = `https://placehold.co/600x450/9CA3AF/1F2937?text=${encodeURIComponent(
+                            image.title || "Photo"
+                          )}`;
+                        }}
+                      />
+                    </a>
+                  );
+                })}
               </div>
             </div>
           </section>
