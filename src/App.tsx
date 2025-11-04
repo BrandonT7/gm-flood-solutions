@@ -936,10 +936,13 @@ function Header() {
           <a href="#reviews" className="hover:text-slate-900 cursor-pointer">
             Reviews
           </a>
+          <a href="#/gallery" className="hover:text-slate-900 cursor-pointer">
+            Gallery
+          </a>{" "}
+          {/* NEW */}
           <a href="#faq" className="hover:text-slate-900 cursor-pointer">
             FAQ
           </a>
-          {/* NEW CONTACT LINK */}
           <a href="#contact" className="hover:text-slate-900 cursor-pointer">
             Contact
           </a>
@@ -1542,6 +1545,78 @@ function QuoteFormPage() {
     </div>
   );
 }
+// --------------------------------------
+// NEW Component: Gallery Page
+// --------------------------------------
+function GalleryPage() {
+  // If your images are named 1.jpg ... 56.jpg:
+  const GALLERY_IMAGES = Array.from(
+    { length: 56 },
+    (_, i) => `/gallery/GeneralGallery(${i + 1}).jpg`
+  );
+
+  // If your extensions vary, replace the line above with an explicit list, e.g.:
+  // const GALLERY_IMAGES = [
+  //   "/gallery/1.jpeg", "/gallery/2.png", ... "/gallery/56.jpg"
+  // ];
+
+  return (
+    <div className="min-h-screen bg-white text-slate-900">
+      <Header />
+      <main className="py-12 md:py-16">
+        <div className="mx-auto max-w-7xl px-4">
+          <div className="text-center mb-8">
+            <p className="text-sm tracking-widest uppercase text-sky-600 font-semibold">
+              Customer & Install Photos
+            </p>
+            <h1 className="mt-2 text-3xl md:text-4xl font-semibold tracking-tight text-slate-900">
+              Gallery
+            </h1>
+            <p className="mt-3 text-slate-600">
+              A curated look at real installs and product shots.
+            </p>
+          </div>
+
+          {/* Responsive grid for 56 images */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-3 md:gap-4">
+            {GALLERY_IMAGES.map((src, idx) => (
+              <a
+                key={idx}
+                href={src}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative block rounded-xl overflow-hidden bg-slate-100 shadow-sm"
+                title={`Photo ${idx + 1}`}
+              >
+                <img
+                  src={src}
+                  alt={`Gallery image ${idx + 1}`}
+                  className="h-32 md:h-40 w-full object-cover transition-transform duration-200 group-hover:scale-105"
+                  onError={(e) => {
+                    e.currentTarget.onerror = null;
+                    e.currentTarget.src = `https://placehold.co/600x400/9CA3AF/1F2937?text=Photo+${
+                      idx + 1
+                    }`;
+                  }}
+                />
+              </a>
+            ))}
+          </div>
+
+          <div className="text-center mt-10">
+            <a
+              href="#/"
+              className="inline-flex items-center rounded-xl border border-slate-300 px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50"
+            >
+              ← Back to Home
+            </a>
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </div>
+  );
+}
 
 // --------------------------------------
 // Component: Contact Section (NEW)
@@ -1996,8 +2071,9 @@ export default function App() {
   // 3. Determine if we are on the landing page (no specific path)
   const isLandingPage =
     !currentHashPath.startsWith("product/") &&
-    !POLICY_PAGES.some((p) => p.slug === currentHashPath) && // NEW check for policy pages
+    !POLICY_PAGES.some((p) => p.slug === currentHashPath) &&
     currentHashPath !== "quote" &&
+    currentHashPath !== "gallery" && // ← add this line
     currentHashPath !== "";
 
   // 1. Initial Load and Hash Change Listener
@@ -2083,7 +2159,10 @@ export default function App() {
   if (currentHashPath === "quote") {
     return <QuoteFormPage />;
   }
-
+  // Gallery page check
+  if (currentHashPath === "gallery") {
+    return <GalleryPage />;
+  }
   // Product detail check
   if (currentHashPath.startsWith("product/")) {
     const slug = currentHashPath.split("product/")[1];
