@@ -1374,11 +1374,10 @@ function ProductDetailPage({
                 {details.exampleImages.map((image, i) => {
                   const href = encodeURI(image.src); // handles spaces like "titanbarrier (3).jpeg"
                   return (
-                    <a
+                    <button
                       key={i}
-                      href={href}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      type="button"
+                      onClick={() => setLbIdx(i)}
                       className="relative block aspect-[4/3] w-full rounded-2xl bg-slate-100 overflow-hidden shadow-md group"
                       title={image.title}
                     >
@@ -1393,7 +1392,7 @@ function ProductDetailPage({
                           )}`;
                         }}
                       />
-                    </a>
+                    </button>
                   );
                 })}
               </div>
@@ -1736,6 +1735,7 @@ function GalleryPage() {
       return num(a) - num(b);
     });
   }, []);
+  const [lbIndex, setLbIndex] = React.useState<number | null>(null);
 
   // 2) Log AFTER the memo so it’s safe
   console.log("Gallery found images:", images.length, images);
@@ -1743,6 +1743,15 @@ function GalleryPage() {
     <div className="min-h-screen bg-white text-slate-900">
       <Header />
       <main className="py-12 md:py-16">
+        {lbIndex !== null && (
+          <Lightbox
+            images={images}
+            index={lbIndex}
+            onClose={() => setLbIndex(null)}
+            onIndexChange={(i) => setLbIndex(i)}
+            caption={(i) => <span>Photo {i + 1}</span>}
+          />
+        )}
         <div className="mx-auto max-w-7xl px-4">
           <div className="text-center mb-8">
             <p className="text-sm tracking-widest uppercase text-sky-600 font-semibold">
@@ -1759,11 +1768,10 @@ function GalleryPage() {
           {/* Responsive grid — no image limit */}
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-3 md:gap-4">
             {images.map((src, idx) => (
-              <a
+              <button
                 key={idx}
-                href={src}
-                target="_blank"
-                rel="noopener noreferrer"
+                type="button"
+                onClick={() => setLbIndex(idx)}
                 className="group relative block rounded-xl overflow-hidden bg-slate-100 shadow-sm"
                 title={`Photo ${idx + 1}`}
               >
@@ -1778,7 +1786,7 @@ function GalleryPage() {
                     }`;
                   }}
                 />
-              </a>
+              </button>
             ))}
           </div>
 
