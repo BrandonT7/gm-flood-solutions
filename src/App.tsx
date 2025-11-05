@@ -1589,15 +1589,26 @@ function QuoteFormPage() {
   );
 }
 // --------------------------------------
-// Component: Gallery Page (FINAL FIXED VERSION)
+// Component: Gallery Page (Dynamic & Unlimited)
 // --------------------------------------
 function GalleryPage() {
-  // Matches your actual filenames:
-  // "GeneralGallery (1).JPG", "GeneralGallery (2).JPG", ..., "GeneralGallery (56).JPG"
-  const GALLERY_IMAGES = Array.from(
-    { length: 56 },
-    (_, i) => `/gallery/${encodeURIComponent(`GeneralGallery (${i + 1}).JPG`)}`
-  );
+  // Dynamically import all images from /src/assets/gallery
+  const images = React.useMemo(() => {
+    const modules = import.meta.glob(
+      "/src/assets/gallery/*.{jpg,jpeg,png,JPG,JPEG,PNG}",
+      { eager: true, as: "url" }
+    );
+    console.log("Gallery found images:", images.length, images);
+    // Extract URLs and sort them by the number in parentheses if present
+    const urls = Object.values(modules) as string[];
+    return urls.sort((a, b) => {
+      const getNum = (s: string) => {
+        const m = s.match(/\((\d+)\)\.[A-Za-z]+$/);
+        return m ? parseInt(m[1], 10) : Number.MAX_SAFE_INTEGER;
+      };
+      return getNum(a) - getNum(b);
+    });
+  }, []);
 
   return (
     <div className="min-h-screen bg-white text-slate-900">
@@ -1616,9 +1627,9 @@ function GalleryPage() {
             </p>
           </div>
 
-          {/* Responsive grid for 56 images */}
+          {/* Responsive grid — no image limit */}
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-3 md:gap-4">
-            {GALLERY_IMAGES.map((src, idx) => (
+            {images.map((src, idx) => (
               <a
                 key={idx}
                 href={src}
@@ -1656,7 +1667,6 @@ function GalleryPage() {
     </div>
   );
 }
-
 // --------------------------------------
 // Component: Contact Section (NEW)
 // --------------------------------------
