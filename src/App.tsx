@@ -718,7 +718,113 @@ function Badge({
     </span>
   );
 }
+// --------------------------------------
+// Reusable Lightbox (click-to-zoom with prev/next)
+// --------------------------------------
+function Lightbox({
+  images,
+  index,
+  onClose,
+  onIndexChange,
+  caption,
+}: {
+  images: string[];
+  index: number;
+  onClose: () => void;
+  onIndexChange: (i: number) => void;
+  caption?: (i: number) => React.ReactNode;
+}) {
+  const [current, setCurrent] = React.useState(index);
+  const startX = React.useRef<number | null>(null);
 
+  React.useEffect(() => setCurrent(index), [index]);
+  React.useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+      if (e.key === "ArrowRight") onIndexChange((current + 1) % images.length);
+      if (e.key === "ArrowLeft")
+        onIndexChange((current - 1 + images.length) % images.length);
+    };
+    document.addEventListener("keydown", onKey);
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prev;
+    };
+  }, [current, images.length, onClose, onIndexChange]);
+
+  const next = () => onIndexChange((current + 1) % images.length);
+  const prev = () =>
+    onIndexChange((current - 1 + images.length) % images.length);
+
+  const onBackdropClick: React.MouseEventHandler<HTMLDivElement> = (e) => {
+    if (e.target === e.currentTarget) onClose();
+  };
+
+  const onTouchStart: React.TouchEventHandler = (e) => {
+    startX.current = e.touches[0].clientX;
+  };
+  const onTouchEnd: React.TouchEventHandler = (e) => {
+    if (startX.current == null) return;
+    const dx = e.changedTouches[0].clientX - startX.current;
+    if (Math.abs(dx) > 40) {
+      if (dx < 0) next();
+      else prev();
+    }
+    startX.current = null;
+  };
+
+  if (!images.length) return null;
+
+  return (
+    <div
+      className="fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 md:p-8"
+      onClick={onBackdropClick}
+      onTouchStart={onTouchStart}
+      onTouchEnd={onTouchEnd}
+    >
+      {/* Close */}
+      <button
+        onClick={onClose}
+        aria-label="Close"
+        className="absolute top-4 right-4 md:top-6 md:right-6 rounded-full bg-white/90 hover:bg-white text-slate-900 shadow p-2"
+      >
+        ✕
+      </button>
+
+      {/* Prev */}
+      <button
+        onClick={prev}
+        aria-label="Previous image"
+        className="absolute left-3 md:left-6 rounded-full bg-white/90 hover:bg-white text-slate-900 shadow p-2"
+      >
+        ←
+      </button>
+
+      {/* Next */}
+      <button
+        onClick={next}
+        aria-label="Next image"
+        className="absolute right-3 md:right-6 rounded-full bg-white/90 hover:bg-white text-slate-900 shadow p-2"
+      >
+        →
+      </button>
+
+      <div className="max-w-[95vw] max-h-[85vh] shadow-2xl rounded-xl overflow-hidden">
+        <img
+          src={images[current]}
+          alt={`Photo ${current + 1}`}
+          className="max-w-[95vw] max-h-[85vh] object-contain bg-black"
+        />
+        <div className="bg-black/70 text-white text-sm px-3 py-2 text-center">
+          {current + 1} / {images.length}
+          {caption ? <div className="mt-1">{caption(current)}</div> : null}
+        </div>
+      </div>
+    </div>
+  );
+}
 // --------------------------------------
 // Reviews header (unchanged)
 // --------------------------------------
@@ -1154,11 +1260,29 @@ function ProductDetailPage({
 
   // category is no longer destructured
   const { name, blurb, img, details } = product;
-
+  // Lightbox state for product examples
+  const productImages = React.useMemo(
+    () => (details.exampleImages || []).map((im) => encodeURI(im.src)),
+    [details.exampleImages]
+  );
+  const [lbIdx, setLbIdx] = React.useState<number | null>(null);
   return (
     <div className="min-h-screen bg-white reorganize text-slate-900">
       <Header />
       <main>
+        {lbIdx !== null && (
+          <Lightbox
+            images={productImages}
+            index={lbIdx}
+            onClose={() => setLbIdx(null)}
+            onIndexChange={(i) => setLbIdx(i)}
+            caption={(i) => (
+              <span className="block">
+                {details.exampleImages?.[i]?.title || name}
+              </span>
+            )}
+          />
+        )}
         {/* Hero / Overview */}
         <section className="bg-slate-50 py-16">
           <div className="mx-auto max-w-7xl px-4 grid md:grid-cols-2 reorganize gap-10 items-center">
