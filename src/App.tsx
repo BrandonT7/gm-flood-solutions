@@ -1593,23 +1593,28 @@ function QuoteFormPage() {
 // --------------------------------------
 function GalleryPage() {
   // Dynamically import all images from /src/assets/gallery
+  // 1) Build the list (no logging here)
   const images = React.useMemo(() => {
+    // Use a robust relative glob that also handles subfolders + webp
     const modules = import.meta.glob(
-      "/src/assets/gallery/*.{jpg,jpeg,png,JPG,JPEG,PNG}",
+      "./assets/gallery/**/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}",
       { eager: true, as: "url" }
     );
-    console.log("Gallery found images:", images.length, images);
-    // Extract URLs and sort them by the number in parentheses if present
+
     const urls = Object.values(modules) as string[];
+
+    // Optional: keep your numeric sort (GeneralGallery (N).JPG)
     return urls.sort((a, b) => {
-      const getNum = (s: string) => {
+      const num = (s: string) => {
         const m = s.match(/\((\d+)\)\.[A-Za-z]+$/);
         return m ? parseInt(m[1], 10) : Number.MAX_SAFE_INTEGER;
       };
-      return getNum(a) - getNum(b);
+      return num(a) - num(b);
     });
   }, []);
 
+  // 2) Log AFTER the memo so it’s safe
+  console.log("Gallery found images:", images.length, images);
   return (
     <div className="min-h-screen bg-white text-slate-900">
       <Header />
