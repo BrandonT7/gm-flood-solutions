@@ -719,7 +719,7 @@ function Badge({
   );
 }
 // --------------------------------------
-// Reusable Lightbox (click-to-zoom with prev/next)
+// Reusable Lightbox (zoom/pinch/pan + prev/next + prettier controls)
 // --------------------------------------
 function Lightbox({
   images,
@@ -735,9 +735,29 @@ function Lightbox({
   caption?: (i: number) => React.ReactNode;
 }) {
   const [current, setCurrent] = React.useState(index);
-  const startX = React.useRef<number | null>(null);
+
+  // Zoom / pan state
+  const [scale, setScale] = React.useState(1);
+  const [tx, setTx] = React.useState(0);
+  const [ty, setTy] = React.useState(0);
+  const [isPanning, setIsPanning] = React.useState(false);
+  const panStart = React.useRef<{
+    x: number;
+    y: number;
+    tx: number;
+    ty: number;
+  } | null>(null);
+  const pinchStart = React.useRef<{
+    d: number;
+    scale: number;
+    cx: number;
+    cy: number;
+  } | null>(null);
+  const containerRef = React.useRef<HTMLDivElement | null>(null);
 
   React.useEffect(() => setCurrent(index), [index]);
+
+  // Keyboard + lock body scroll
   React.useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
@@ -746,13 +766,25 @@ function Lightbox({
         onIndexChange((current - 1 + images.length) % images.length);
     };
     document.addEventListener("keydown", onKey);
-    const prev = document.body.style.overflow;
+    const prevOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     return () => {
       document.removeEventListener("keydown", onKey);
-      document.body.style.overflow = prev;
+      document.body.style.overflow = prevOverflow;
     };
   }, [current, images.length, onClose, onIndexChange]);
+
+  const clampScale = (s: number) => Math.min(5, Math.max(1, s));
+
+  const resetView = React.useCallback(() => {
+    setScale(1);
+    setTx(0);
+    setTy(0);
+    setIsPanning(false);
+    panStart.current = null;
+    pinchStart.current = null;
+  }, []);
+  React.useEffect(() => resetView(), [current, resetView]);
 
   const next = () => onIndexChange((current + 1) % images.length);
   const prev = () =>
@@ -762,64 +794,198 @@ function Lightbox({
     if (e.target === e.currentTarget) onClose();
   };
 
-  const onTouchStart: React.TouchEventHandler = (e) => {
-    startX.current = e.touches[0].clientX;
-  };
-  const onTouchEnd: React.TouchEventHandler = (e) => {
-    if (startX.current == null) return;
-    const dx = e.changedTouches[0].clientX - startX.current;
-    if (Math.abs(dx) > 40) {
-      if (dx < 0) next();
-      else prev();
+  // Double-click toggle: 1x <-> 2x, centered on cursor
+  const onDoubleClick: React.MouseEventHandler<HTMLImageElement> = (e) => {
+    const rect = (e.currentTarget as HTMLImageElement).getBoundingClientRect();
+    const cx = e.clientX - rect.left - rect.width / 2;
+    const cy = e.clientY - rect.top - rect.height / 2;
+    if (scale === 1) {
+      const newScale = 2;
+      setTx((p) => p - cx);
+      setTy((p) => p - cy);
+      setScale(newScale);
+    } else {
+      resetView();
     }
-    startX.current = null;
+  };
+
+  // Wheel zoom (centered on pointer)
+  const onWheel: React.WheelEventHandler<HTMLDivElement> = (e) => {
+    e.preventDefault();
+    const imgEl = containerRef.current?.querySelector("img");
+    if (!imgEl) return;
+    const rect = imgEl.getBoundingClientRect();
+    const cx = e.clientX - rect.left - rect.width / 2;
+    const cy = e.clientY - rect.top - rect.height / 2;
+    const delta = -e.deltaY; // up = zoom in
+    const zoomIntensity = 0.0015;
+    const scaleFactor = 1 + delta * zoomIntensity;
+    const newScale = clampScale(scale * scaleFactor);
+    setTx((p) => p - cx * (newScale / scale - 1));
+    setTy((p) => p - cy * (newScale / scale - 1));
+    setScale(newScale);
+  };
+
+  // Mouse pan
+  const onMouseDown: React.MouseEventHandler<HTMLDivElement> = (e) => {
+    if (scale === 1) return;
+    setIsPanning(true);
+    panStart.current = { x: e.clientX, y: e.clientY, tx, ty };
+  };
+  const onMouseMove: React.MouseEventHandler<HTMLDivElement> = (e) => {
+    if (!isPanning || !panStart.current) return;
+    const dx = e.clientX - panStart.current.x;
+    const dy = e.clientY - panStart.current.y;
+    setTx(panStart.current.tx + dx);
+    setTy(panStart.current.ty + dy);
+  };
+  const endPan = () => {
+    setIsPanning(false);
+    panStart.current = null;
+  };
+
+  // Touch: pinch zoom + pan
+  type TouchLike = { clientX: number; clientY: number };
+
+  const distance = (t1: TouchLike, t2: TouchLike) =>
+    Math.hypot(t2.clientX - t1.clientX, t2.clientY - t1.clientY);
+
+  const touchCenter = (t1: TouchLike, t2: TouchLike, el: Element) => {
+    const rect = (el as HTMLElement).getBoundingClientRect();
+    const midX = (t1.clientX + t2.clientX) / 2 - rect.left - rect.width / 2;
+    const midY = (t1.clientY + t2.clientY) / 2 - rect.top - rect.height / 2;
+    return { cx: midX, cy: midY };
+  };
+  const onTouchStart: React.TouchEventHandler<HTMLDivElement> = (e) => {
+    if (e.touches.length === 2) {
+      const [t1, t2] = [e.touches[0], e.touches[1]];
+      const imgEl = containerRef.current?.querySelector("img");
+      if (!imgEl) return;
+      const { cx, cy } = touchCenter(t1, t2, imgEl);
+      pinchStart.current = { d: distance(t1, t2), scale, cx, cy };
+    } else if (e.touches.length === 1 && scale > 1) {
+      setIsPanning(true);
+      panStart.current = {
+        x: e.touches[0].clientX,
+        y: e.touches[0].clientY,
+        tx,
+        ty,
+      };
+    }
+  };
+  const onTouchMove: React.TouchEventHandler<HTMLDivElement> = (e) => {
+    if (e.touches.length === 2 && pinchStart.current) {
+      e.preventDefault();
+      const [t1, t2] = [e.touches[0], e.touches[1]];
+      const imgEl = containerRef.current?.querySelector("img");
+      if (!imgEl) return;
+      const { cx, cy } = touchCenter(t1, t2, imgEl);
+      const factor = distance(t1, t2) / pinchStart.current.d;
+      const newScale = clampScale(pinchStart.current.scale * factor);
+      setTx((p) => p - cx * (newScale / scale - 1));
+      setTy((p) => p - cy * (newScale / scale - 1));
+      setScale(newScale);
+    } else if (e.touches.length === 1 && isPanning && panStart.current) {
+      const dx = e.touches[0].clientX - panStart.current.x;
+      const dy = e.touches[0].clientY - panStart.current.y;
+      setTx(panStart.current.tx + dx);
+      setTy(panStart.current.ty + dy);
+    }
+  };
+  const onTouchEnd: React.TouchEventHandler<HTMLDivElement> = () => {
+    setIsPanning(false);
+    panStart.current = null;
+    pinchStart.current = null;
   };
 
   if (!images.length) return null;
 
+  const imageCursor =
+    scale === 1
+      ? "cursor-zoom-in"
+      : isPanning
+      ? "cursor-grabbing"
+      : "cursor-grab";
+
   return (
     <div
-      className="fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 md:p-8"
+      ref={containerRef}
+      className="fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 md:p-8 touch-none"
       onClick={onBackdropClick}
+      onWheel={onWheel}
+      onMouseDown={onMouseDown}
+      onMouseMove={onMouseMove}
+      onMouseUp={endPan}
+      onMouseLeave={endPan}
       onTouchStart={onTouchStart}
+      onTouchMove={onTouchMove}
       onTouchEnd={onTouchEnd}
+      role="dialog"
+      aria-modal="true"
     >
       {/* Close */}
       <button
-        onClick={onClose}
+        onClick={() => {
+          resetView();
+          onClose();
+        }}
         aria-label="Close"
-        className="absolute top-4 right-4 md:top-6 md:right-6 rounded-full bg-white/90 hover:bg-white text-slate-900 shadow p-2"
+        className="absolute top-4 right-4 md:top-6 md:right-6 rounded-full bg-white/90 hover:bg-white text-slate-900 shadow-lg p-2 md:p-3 ring-1 ring-slate-200 hover:ring-2 hover:ring-slate-300 transition cursor-pointer"
       >
         ✕
       </button>
 
       {/* Prev */}
       <button
-        onClick={prev}
+        onClick={() => {
+          resetView();
+          prev();
+        }}
         aria-label="Previous image"
-        className="absolute left-3 md:left-6 rounded-full bg-white/90 hover:bg-white text-slate-900 shadow p-2"
+        className="absolute left-3 md:left-6 rounded-full bg-white/90 hover:bg-white text-slate-900 shadow-lg p-2 md:p-3 ring-1 ring-slate-200 hover:ring-2 hover:ring-slate-300 transition cursor-pointer"
       >
         ←
       </button>
 
       {/* Next */}
       <button
-        onClick={next}
+        onClick={() => {
+          resetView();
+          next();
+        }}
         aria-label="Next image"
-        className="absolute right-3 md:right-6 rounded-full bg-white/90 hover:bg-white text-slate-900 shadow p-2"
+        className="absolute right-3 md:right-6 rounded-full bg-white/90 hover:bg-white text-slate-900 shadow-lg p-2 md:p-3 ring-1 ring-slate-200 hover:ring-2 hover:ring-slate-300 transition cursor-pointer"
       >
         →
       </button>
-
-      <div className="max-w-[95vw] max-h-[85vh] shadow-2xl rounded-xl overflow-hidden">
+      {/* Image + caption */}
+      <div className="max-w-[95vw] max-h-[85vh] shadow-2xl rounded-xl overflow-hidden bg-black/60">
         <img
           src={images[current]}
           alt={`Photo ${current + 1}`}
-          className="max-w-[95vw] max-h-[85vh] object-contain bg-black"
+          className={`max-w-[95vw] max-h-[85vh] object-contain select-none ${imageCursor}`}
+          style={{
+            transform: `translate3d(${tx}px, ${ty}px, 0) scale(${scale})`,
+            transition: isPanning ? "none" : "transform 120ms ease-out",
+          }}
+          onDoubleClick={onDoubleClick}
+          draggable={false}
+          onError={(e) => {
+            e.currentTarget.onerror = null;
+            e.currentTarget.src =
+              "https://placehold.co/1600x1200/111827/FFFFFF?text=Image+unavailable";
+          }}
         />
-        <div className="bg-black/70 text-white text-sm px-3 py-2 text-center">
-          {current + 1} / {images.length}
+        <div className="bg-black/70 text-white text-sm md:text-base px-3 py-2 text-center">
+          <span className="opacity-80">
+            {current + 1} / {images.length}
+          </span>
           {caption ? <div className="mt-1">{caption(current)}</div> : null}
+          {scale > 1 && (
+            <div className="mt-1 text-xs opacity-80">
+              Drag to pan · Double-click to reset
+            </div>
+          )}
         </div>
       </div>
     </div>
@@ -1378,7 +1544,7 @@ function ProductDetailPage({
                       key={i}
                       type="button"
                       onClick={() => setLbIdx(i)}
-                      className="relative block aspect-[4/3] w-full rounded-2xl bg-slate-100 overflow-hidden shadow-md group"
+                      className="relative block aspect-[4/3] w-full rounded-2xl bg-slate-100 overflow-hidden shadow-md group cursor-pointer ring-0 hover:ring-2 hover:ring-white/70"
                       title={image.title}
                     >
                       <img
@@ -1772,7 +1938,7 @@ function GalleryPage() {
                 key={idx}
                 type="button"
                 onClick={() => setLbIndex(idx)}
-                className="group relative block rounded-xl overflow-hidden bg-slate-100 shadow-sm"
+                className="group relative block rounded-xl overflow-hidden bg-slate-100 shadow-sm cursor-pointer ring-0 hover:ring-2 hover:ring-white/70"
                 title={`Photo ${idx + 1}`}
               >
                 <img
