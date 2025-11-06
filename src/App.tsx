@@ -2093,12 +2093,6 @@ function LandingPage() {
                   businesses—sleek, strong, and fast to deploy. No sandbags. No
                   mess.
                 </p>
-                {/* Gallery Button under hero text */}
-                <div className="mt-8 flex justify-center">
-                  <Button asChild size="lg" className="rounded-2xl">
-                    <a href="#/gallery">View Gallery</a>
-                  </Button>
-                </div>
                 <div className="mt-6 flex flex-wrap gap-3">
                   {/* UPDATED: Link to the new QuoteFormPage */}
                   <Button asChild size="lg" className="rounded-2xl">
@@ -2131,7 +2125,27 @@ function LandingPage() {
           </div>
         </div>
       </section>
+      {/* Standalone Gallery Section */}
+      <section
+        id="gallery-section"
+        className="py-16 bg-slate-50 border-t border-slate-200"
+      >
+        <div className="mx-auto max-w-7xl px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-semibold text-slate-900">
+            Explore Our Gallery
+          </h2>
+          <p className="mt-3 text-slate-600 max-w-2xl mx-auto">
+            See real installations and customer projects using our flood
+            protection systems.
+          </p>
 
+          <div className="mt-8 flex justify-center">
+            <Button asChild size="lg" className="rounded-2xl">
+              <a href="#/gallery">View Gallery</a>
+            </Button>
+          </div>
+        </div>
+      </section>
       {/* NEW Section: Services and Recovery */}
       <section
         id="services"
