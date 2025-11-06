@@ -2093,6 +2093,12 @@ function LandingPage() {
                   businesses—sleek, strong, and fast to deploy. No sandbags. No
                   mess.
                 </p>
+                {/* Gallery Button under hero text */}
+                <div className="mt-8 flex justify-center">
+                  <Button asChild size="lg" className="rounded-2xl">
+                    <a href="#/gallery">View Gallery</a>
+                  </Button>
+                </div>
                 <div className="mt-6 flex flex-wrap gap-3">
                   {/* UPDATED: Link to the new QuoteFormPage */}
                   <Button asChild size="lg" className="rounded-2xl">
