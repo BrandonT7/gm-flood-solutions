@@ -1535,7 +1535,7 @@ function ProductDetailPage({
                   properties.
                 </p>
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center place-items-center">
+              <div className="flex flex-wrap justify-center items-center gap-6">
                 {/* Changed to lg:grid-cols-3 to display 6 images well (2 rows of 3) */}
                 {details.exampleImages.map((image, i) => {
                   const href = encodeURI(image.src); // handles spaces like "titanbarrier (3).jpeg"
