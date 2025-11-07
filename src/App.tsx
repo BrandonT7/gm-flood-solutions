@@ -1535,7 +1535,7 @@ function ProductDetailPage({
                   properties.
                 </p>
               </div>
-              <div className="flex flex-wrap justify-center items-center gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center place-items-center">
                 {/* Changed to lg:grid-cols-3 to display 6 images well (2 rows of 3) */}
                 {details.exampleImages.map((image, i) => {
                   const href = encodeURI(image.src); // handles spaces like "titanbarrier (3).jpeg"
@@ -1544,7 +1544,7 @@ function ProductDetailPage({
                       key={i}
                       type="button"
                       onClick={() => setLbIdx(i)}
-                      className="relative block aspect-[4/3] w-full rounded-2xl bg-slate-100 overflow-hidden shadow-md group cursor-pointer ring-0 hover:ring-2 hover:ring-white/70"
+                      className="relative block aspect-[4/3] w-[220px] sm:w-[260px] md:w-[300px] rounded-2xl bg-slate-100 overflow-hidden shadow-md group cursor-pointer ring-0 hover:ring-2 hover:ring-white/70"
                       title={image.title}
                     >
                       <img
@@ -1932,7 +1932,7 @@ function GalleryPage() {
           </div>
 
           {/* Responsive grid — no image limit */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-3 md:gap-4">
+          <div className="grid [grid-template-columns:repeat(auto-fit,minmax(220px,1fr))] justify-center justify-items-center gap-4 sm:gap-6">
             {images.map((src, idx) => (
               <button
                 key={idx}
