@@ -1930,32 +1930,33 @@ function GalleryPage() {
               A curated look at real installs and product shots.
             </p>
           </div>
-
           {/* Responsive grid — no image limit */}
-          <div className="grid [grid-template-columns:repeat(auto-fit,minmax(220px,1fr))] justify-center justify-items-center gap-4 sm:gap-6">
-            {images.map((src, idx) => (
-              <button
-                key={idx}
-                type="button"
-                onClick={() => setLbIndex(idx)}
-                className="group relative block rounded-xl overflow-hidden bg-slate-100 shadow-sm cursor-pointer ring-0 hover:ring-2 hover:ring-white/70"
-                title={`Photo ${idx + 1}`}
-              >
-                <img
-                  src={src}
-                  alt={`Gallery image ${idx + 1}`}
-                  className="h-32 md:h-40 w-full object-cover transition-transform duration-200 group-hover:scale-105"
-                  onError={(e) => {
-                    e.currentTarget.onerror = null;
-                    e.currentTarget.src = `https://placehold.co/600x400/9CA3AF/1F2937?text=Photo+${
-                      idx + 1
-                    }`;
-                  }}
-                />
-              </button>
-            ))}
+          /* Responsive grid — no image limit */
+          <div className="flex flex-wrap justify-center gap-4 md:gap-6">
+            {images.map((image, idx) => {
+              const href = encodeURI(image); // ✅ changed from image.src → image
+              return (
+                <button
+                  key={idx}
+                  type="button"
+                  onClick={() => setLbIndex(idx)}
+                  title={`Photo ${idx + 1}`}
+                  className="relative block aspect-[4/3] w-[220px] sm:w-[260px] md:w-[300px] rounded-2xl bg-slate-100 overflow-hidden shadow-md group cursor-pointer ring-0 hover:ring-2 hover:ring-white/70"
+                >
+                  <img
+                    src={href}
+                    alt={`Photo ${idx + 1}`}
+                    className="h-full w-full object-cover transition-transform duration-200 group-hover:scale-105"
+                    onError={(e) => {
+                      e.currentTarget.onerror = null;
+                      e.currentTarget.src =
+                        "https://placehold.co/600x450/9CA3AF/1F2937?text=Photo";
+                    }}
+                  />
+                </button>
+              );
+            })}
           </div>
-
           <div className="text-center mt-10">
             <a
               href="#/"
